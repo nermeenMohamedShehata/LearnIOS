@@ -16,6 +16,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.makeKeyAndVisible()
+        let flowLayout = UICollectionViewLayout()
+        let toDoListVC = ToDoListVC(collectionViewLayout: flowLayout)
+     //   let pageVC = ProjectPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
+        window?.rootViewController = UINavigationController(rootViewController: toDoListVC)
+       // window?.rootViewController = UINavigationController(rootViewController: customController)
+      //  window?.rootViewController = CaursolVC()
         return true
     }
 
