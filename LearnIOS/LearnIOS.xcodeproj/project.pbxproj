@@ -25,6 +25,9 @@
 		8AA47AB22236711500B6C0E1 /* QuestionLearn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA47AB12236711500B6C0E1 /* QuestionLearn.swift */; };
 		8AA47AB622367E0300B6C0E1 /* ResultsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA47AB522367E0300B6C0E1 /* ResultsVC.swift */; };
 		8AA47AB8223684FD00B6C0E1 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA47AB7223684FD00B6C0E1 /* Question.swift */; };
+		8AA47ABB2236EE0700B6C0E1 /* FeedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA47ABA2236EE0700B6C0E1 /* FeedController.swift */; };
+		8AA47ABD2236EE8E00B6C0E1 /* FBSummryLearn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA47ABC2236EE8E00B6C0E1 /* FBSummryLearn.swift */; };
+		8AA47ABF2236F1AB00B6C0E1 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA47ABE2236F1AB00B6C0E1 /* FeedCell.swift */; };
 		99DA002B2614C280C07AE828 /* Pods_LearnIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C7F174B19C1095219BF5A4E /* Pods_LearnIOS.framework */; };
 		F0BF85CCAB433EB3023A8225 /* Pods_LearnIOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A991DC45597A22361D5D871F /* Pods_LearnIOSTests.framework */; };
 /* End PBXBuildFile section */
@@ -65,6 +68,9 @@
 		8AA47AB12236711500B6C0E1 /* QuestionLearn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionLearn.swift; sourceTree = "<group>"; };
 		8AA47AB522367E0300B6C0E1 /* ResultsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsVC.swift; sourceTree = "<group>"; };
 		8AA47AB7223684FD00B6C0E1 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		8AA47ABA2236EE0700B6C0E1 /* FeedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedController.swift; sourceTree = "<group>"; };
+		8AA47ABC2236EE8E00B6C0E1 /* FBSummryLearn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBSummryLearn.swift; sourceTree = "<group>"; };
+		8AA47ABE2236F1AB00B6C0E1 /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 		A991DC45597A22361D5D871F /* Pods_LearnIOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LearnIOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD40448BD317723378D4A71F /* Pods-LearnIOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearnIOS.debug.xcconfig"; path = "Target Support Files/Pods-LearnIOS/Pods-LearnIOS.debug.xcconfig"; sourceTree = "<group>"; };
 		F7488A442526E7D1F8F32816 /* Pods-LearnIOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearnIOS.release.xcconfig"; path = "Target Support Files/Pods-LearnIOS/Pods-LearnIOS.release.xcconfig"; sourceTree = "<group>"; };
@@ -122,6 +128,7 @@
 		8A26E2B32234379700E97351 /* LearnIOS */ = {
 			isa = PBXGroup;
 			children = (
+				8AA47AB92236ED4E00B6C0E1 /* FB New Feeds */,
 				8A26E2E722358E2A00E97351 /* Questionnaire App */,
 				8A26E2E222357A3D00E97351 /* RSS Reader */,
 				8A26E2DB22346C6400E97351 /* TO DO List */,
@@ -191,6 +198,16 @@
 				8AA47AB12236711500B6C0E1 /* QuestionLearn.swift */,
 			);
 			path = "Questionnaire App";
+			sourceTree = "<group>";
+		};
+		8AA47AB92236ED4E00B6C0E1 /* FB New Feeds */ = {
+			isa = PBXGroup;
+			children = (
+				8AA47ABA2236EE0700B6C0E1 /* FeedController.swift */,
+				8AA47ABE2236F1AB00B6C0E1 /* FeedCell.swift */,
+				8AA47ABC2236EE8E00B6C0E1 /* FBSummryLearn.swift */,
+			);
+			path = "FB New Feeds";
 			sourceTree = "<group>";
 		};
 		F5DD6094DF5D4E4C75BEFDE8 /* Pods */ = {
@@ -356,10 +373,12 @@
 				8AA47AB8223684FD00B6C0E1 /* Question.swift in Sources */,
 				8A26E2D82234671E00E97351 /* CaursolVC.swift in Sources */,
 				8A26E2E1223472BA00E97351 /* ToDoHeaderCell.swift in Sources */,
+				8AA47ABD2236EE8E00B6C0E1 /* FBSummryLearn.swift in Sources */,
 				8A26E2DF22346CBE00E97351 /* ToDoCell.swift in Sources */,
 				8A26E2B72234379700E97351 /* CustomCollectionView.swift in Sources */,
 				8A26E2ED223594DF00E97351 /* QuestionHeaderCell.swift in Sources */,
 				8A26E2E422357A6500E97351 /* EntryCell.swift in Sources */,
+				8AA47ABB2236EE0700B6C0E1 /* FeedController.swift in Sources */,
 				8A26E2E922358E5300E97351 /* QuestionController.swift in Sources */,
 				8AA47AB622367E0300B6C0E1 /* ResultsVC.swift in Sources */,
 				8A26E2DD22346C8800E97351 /* ToDoListVC.swift in Sources */,
@@ -368,6 +387,7 @@
 				8A26E2D52234526E00E97351 /* CustomCell.swift in Sources */,
 				8A26E2B52234379700E97351 /* AppDelegate.swift in Sources */,
 				8A26E2E622357D7700E97351 /* EntryListVC.swift in Sources */,
+				8AA47ABF2236F1AB00B6C0E1 /* FeedCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

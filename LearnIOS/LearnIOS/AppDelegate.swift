@@ -18,15 +18,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
-
-     //   let pageVC = ProjectPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
-    //    openEntryListVC()
         application.statusBarStyle = .lightContent
-        openQuestionVC()
-        // window?.rootViewController = UINavigationController(rootViewController: customController)
-      //  window?.rootViewController = CaursolVC()
-  
+    //    openEntryListVC()
+//        openQuestionVC()
+        openFBNewFeedsVC()
         return true
+    }
+    func openCaurslPage(){
+        //   let pageVC = ProjectPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
+
     }
     func todoListVC() {
         let flowLayout = UICollectionViewLayout()
@@ -46,6 +46,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().tintColor = UIColor.white
         UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.white]
 
+    }
+    func openFBNewFeedsVC(){
+        let flowLayout = UICollectionViewLayout()
+        let vc = FeedController(collectionViewLayout: flowLayout)
+        window?.rootViewController = UINavigationController(rootViewController: vc)
+        UINavigationBar.appearance().barTintColor = UIColor(red: 51/255, green: 90/255, blue: 145/255, alpha: 1)
+        UINavigationBar.appearance().tintColor = .white
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.white]
     }
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
