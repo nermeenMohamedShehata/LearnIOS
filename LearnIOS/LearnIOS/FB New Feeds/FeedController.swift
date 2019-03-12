@@ -32,6 +32,10 @@ class FeedController: UICollectionViewController ,UICollectionViewDelegateFlowLa
         collectionView.backgroundColor = UIColor.init(white: 0.95, alpha: 1)
         
     }
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
+        collectionView.collectionViewLayout.invalidateLayout()
+    }
     
     
 
@@ -65,7 +69,7 @@ class FeedController: UICollectionViewController ,UICollectionViewDelegateFlowLa
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: self.view.frame.width, height: 500)
+        return CGSize(width: self.view.frame.width, height: 400)
     }
 
     // MARK: UICollectionViewDelegate

@@ -69,7 +69,6 @@ class QuestionController: UITableViewController {
         return UITableView.automaticDimension
     }
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let viewControlls = self.navigationController?.viewControllers   else {return }
         if currentIndex < questionList.count - 1 {
             let vc = QuestionController()
             self.navigationController?.pushViewController(vc, animated: true)

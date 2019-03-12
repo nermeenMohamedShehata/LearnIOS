@@ -23,7 +23,8 @@ class FeedCell: UICollectionViewCell {
         label.lineBreakMode = .byWordWrapping
         // color for each line
         var attributedText  = NSMutableAttributedString(string: "Sample Text", attributes: [NSAttributedString.Key.font:UIFont.boldSystemFont(ofSize: 14)])
-        attributedText.append(NSAttributedString(string: "\nSeptemper - San Fransico * ", attributes: [NSAttributedString.Key.font:UIFont.systemFont(ofSize: 12),NSAttributedString.Key.foregroundColor:UIColor(red: 155/255, green: 161/255, blue: 171/255, alpha: 1)]))
+        attributedText.append(NSAttributedString(string: "\nSeptemper - San Fransico * ", attributes: [NSAttributedString.Key.font:UIFont.systemFont(ofSize: 12),NSAttributedString.Key.foregroundColor:UIColor.rgb(red: 155, green: 161, blue: 171)]))
+        
         // for space between 2 line
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.lineSpacing = 4
@@ -44,7 +45,6 @@ class FeedCell: UICollectionViewCell {
         textView.translatesAutoresizingMaskIntoConstraints = false
         textView.text = "Manazella : from dark side."
         textView.font = UIFont.systemFont(ofSize: 14)
-        textView.backgroundColor = .yellow
         return textView
     }()
     lazy private var statusImageView : UIImageView = {
@@ -52,9 +52,43 @@ class FeedCell: UICollectionViewCell {
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.image = UIImage(named: "zuckdog")
         imageView.contentMode = .scaleAspectFill
+        imageView.layer.masksToBounds = true
         return imageView
     }()
+    lazy private var likesCommentLabel : UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.font = UIFont.systemFont(ofSize: 12)
+        label.text = "4000 Likes - 1K Comments"
+        label.textColor = UIColor.rgb(red: 155, green: 161, blue: 171)
+        return label
+    }()
+    lazy private var divideLineView : UIView = {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.backgroundColor = UIColor.rgb(red: 226, green: 228, blue: 232)
+        return view
+    }()
+    lazy var likeButton : UIButton = {
+       return FeedCell.buttonForTitle(title: "Like", imageName: "like")
+    }()
+    lazy var commentButton : UIButton = {
+        return FeedCell.buttonForTitle(title: "Comment", imageName: "comment")
+    }()
+    lazy var shareButton : UIButton = {
+        return FeedCell.buttonForTitle(title: "Share", imageName: "share")
+    }()
    
+    static func buttonForTitle(title:String,imageName:String) -> UIButton {
+        let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setTitle(title, for: .normal)
+        button.setTitleColor(UIColor.rgb(red: 143, green: 150, blue: 163), for: .normal)
+        button.setImage(UIImage(named: imageName), for: .normal)
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
+        button.titleEdgeInsets = UIEdgeInsets(top: 0, left: 8, bottom: 0, right: 0)
+        return button
+    }
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupLayout()
@@ -68,6 +102,11 @@ class FeedCell: UICollectionViewCell {
         addSubview(nameLabel)
         addSubview(statusTextView)
         addSubview(statusImageView)
+        addSubview(likesCommentLabel)
+        addSubview(divideLineView)
+        addSubview(likeButton)
+        addSubview(commentButton)
+        addSubview(shareButton)
     }
     private func setupLayout(){
         backgroundColor = .white
@@ -76,10 +115,15 @@ class FeedCell: UICollectionViewCell {
         setupNameLabelConstraints()
         setupStatusTextViewConstraints()
         setupStatusImageViewConstraints()
+        setupLikeCommentsLabelConstraints()
+        setupDivideLineViewConstraints()
+        setupLikeButtonConstraints()
+        setupCommentButtonConstraints()
+        setupShareButtonConstraints()
     }
     private func setupProfileImageConstraints(){
         NSLayoutConstraint.activate([
-            profileImageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 4),
+            profileImageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 8),
             profileImageView.topAnchor.constraint(equalTo: topAnchor, constant: 8),
             profileImageView.widthAnchor.constraint(equalToConstant: 44),
             profileImageView.heightAnchor.constraint(equalToConstant: 44)
@@ -104,8 +148,49 @@ class FeedCell: UICollectionViewCell {
         NSLayoutConstraint.activate([
             statusImageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 0),
             statusImageView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: 0),
-            statusImageView.topAnchor.constraint(equalTo: statusTextView.bottomAnchor, constant: 4),
-            statusImageView.bottomAnchor.constraint(equalTo: bottomAnchor)
+            statusImageView.topAnchor.constraint(equalTo: statusTextView.bottomAnchor, constant: 4)
+            ])
+    }
+    private func setupLikeCommentsLabelConstraints(){
+        NSLayoutConstraint.activate([
+            likesCommentLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 12),
+            likesCommentLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: 0),
+            likesCommentLabel.topAnchor.constraint(equalTo: statusImageView.bottomAnchor, constant: 8),
+            likesCommentLabel.heightAnchor.constraint(equalToConstant: 24)
+            ])
+    }
+    private func setupDivideLineViewConstraints(){
+        NSLayoutConstraint.activate([
+            divideLineView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 12),
+            divideLineView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -12),
+            divideLineView.heightAnchor.constraint(equalToConstant: 0.4),
+            divideLineView.topAnchor.constraint(equalTo: likesCommentLabel.bottomAnchor, constant: 8),
+            ])
+    }
+    private func setupLikeButtonConstraints(){
+        NSLayoutConstraint.activate([
+            likeButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 0),
+            likeButton.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 1/3),
+//            likeButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: 0),
+            likeButton.heightAnchor.constraint(equalToConstant: 44),
+            likeButton.topAnchor.constraint(equalTo: divideLineView.bottomAnchor, constant: 0),
+            likeButton.bottomAnchor.constraint(equalTo: bottomAnchor, constant: 0),
+            ])
+    }
+    private func setupCommentButtonConstraints(){
+        NSLayoutConstraint.activate([
+            commentButton.leadingAnchor.constraint(equalTo: likeButton.trailingAnchor, constant: 8),
+            commentButton.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 1/3),
+            commentButton.heightAnchor.constraint(equalToConstant: 44),
+            commentButton.topAnchor.constraint(equalTo: divideLineView.bottomAnchor, constant: 0),
+            ])
+    }
+    private func setupShareButtonConstraints(){
+        NSLayoutConstraint.activate([
+            shareButton.leadingAnchor.constraint(equalTo: commentButton.trailingAnchor, constant: 8),
+            shareButton.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 1/3),
+            shareButton.heightAnchor.constraint(equalToConstant: 44),
+            shareButton.topAnchor.constraint(equalTo: divideLineView.bottomAnchor, constant: 0),
             ])
     }
 }
