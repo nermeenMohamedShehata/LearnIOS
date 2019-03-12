@@ -18,11 +18,13 @@ import Foundation
  
     attributedText.append(NSAttributedString(string: "\nSeptemper - San Fransico * ", attributes: [NSAttributedString.Key.font:UIFont.systemFont(ofSize: 12),NSAttributedString.Key.foregroundColor:UIColor(red: 155/255, green: 161/255, blue: 171/255, alpha: 1)]))
  
- // for space between 2 line
+ // NSMutableParagraphStyle ->  for space between 2 line
  
     let paragraphStyle = NSMutableParagraphStyle()
     paragraphStyle.lineSpacing = 4
     attributedText.addAttribute(NSAttributedString.Key.paragraphStyle, value: paragraphStyle, range: NSMakeRange(0, attributedText.string.count))
     label.attributedText = attributedText
+ 
+ attachment -> attach image to label
  
 */
