@@ -9,5 +9,10 @@
 import Foundation
 class Post {
     var name: String?
-    var statusText: String?
+    var profileImageName : String?
+//    var location : Location?
+    var postStatusText: String?
+    var statusImageName : String?
+    var numLikes : Int?
+    var numComments : Int?
 }

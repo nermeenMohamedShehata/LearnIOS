@@ -30,6 +30,7 @@
 		8AA47ABF2236F1AB00B6C0E1 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA47ABE2236F1AB00B6C0E1 /* FeedCell.swift */; };
 		8AA47AC22237CC1600B6C0E1 /* Utilits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA47AC12237CC1600B6C0E1 /* Utilits.swift */; };
 		8AA47AC422381A9500B6C0E1 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA47AC322381A9500B6C0E1 /* Post.swift */; };
+		8AFFC2A722398AC00066BC7D /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFFC2A622398AC00066BC7D /* R.generated.swift */; };
 		99DA002B2614C280C07AE828 /* Pods_LearnIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C7F174B19C1095219BF5A4E /* Pods_LearnIOS.framework */; };
 		F0BF85CCAB433EB3023A8225 /* Pods_LearnIOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A991DC45597A22361D5D871F /* Pods_LearnIOSTests.framework */; };
 /* End PBXBuildFile section */
@@ -75,6 +76,7 @@
 		8AA47ABE2236F1AB00B6C0E1 /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 		8AA47AC12237CC1600B6C0E1 /* Utilits.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilits.swift; sourceTree = "<group>"; };
 		8AA47AC322381A9500B6C0E1 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		8AFFC2A622398AC00066BC7D /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		A991DC45597A22361D5D871F /* Pods_LearnIOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LearnIOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD40448BD317723378D4A71F /* Pods-LearnIOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearnIOS.debug.xcconfig"; path = "Target Support Files/Pods-LearnIOS/Pods-LearnIOS.debug.xcconfig"; sourceTree = "<group>"; };
 		F7488A442526E7D1F8F32816 /* Pods-LearnIOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearnIOS.release.xcconfig"; path = "Target Support Files/Pods-LearnIOS/Pods-LearnIOS.release.xcconfig"; sourceTree = "<group>"; };
@@ -219,6 +221,7 @@
 		8AA47AC02237CC0100B6C0E1 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				8AFFC2A622398AC00066BC7D /* R.generated.swift */,
 				8AA47AC12237CC1600B6C0E1 /* Utilits.swift */,
 			);
 			path = Helper;
@@ -243,9 +246,11 @@
 			buildConfigurationList = 8A26E2CE2234379A00E97351 /* Build configuration list for PBXNativeTarget "LearnIOS" */;
 			buildPhases = (
 				695EB8A980F8ABC1F966F75D /* [CP] Check Pods Manifest.lock */,
+				8AFFC2A522398A0C0066BC7D /* Rswift */,
 				8A26E2AD2234379700E97351 /* Sources */,
 				8A26E2AE2234379700E97351 /* Frameworks */,
 				8A26E2AF2234379700E97351 /* Resources */,
+				C91EBBB6538F469DEFFF8346 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -355,6 +360,26 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		8AFFC2A522398A0C0066BC7D /* Rswift */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$TEMP_DIR/rswift-lastrun",
+			);
+			name = Rswift;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				$SRCROOT/R.generated.swift,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R.generated.swift\"\n";
+		};
 		C7099DED968E305FA212AD8E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -377,6 +402,28 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		C91EBBB6538F469DEFFF8346 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LearnIOS/Pods-LearnIOS-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LearnIOS/Pods-LearnIOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -392,6 +439,7 @@
 				8A26E2B72234379700E97351 /* CustomCollectionView.swift in Sources */,
 				8AA47AC22237CC1600B6C0E1 /* Utilits.swift in Sources */,
 				8A26E2ED223594DF00E97351 /* QuestionHeaderCell.swift in Sources */,
+				8AFFC2A722398AC00066BC7D /* R.generated.swift in Sources */,
 				8A26E2E422357A6500E97351 /* EntryCell.swift in Sources */,
 				8AA47ABB2236EE0700B6C0E1 /* FeedController.swift in Sources */,
 				8A26E2E922358E5300E97351 /* QuestionController.swift in Sources */,

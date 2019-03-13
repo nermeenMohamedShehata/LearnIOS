@@ -20,12 +20,31 @@ class FeedController: UICollectionViewController ,UICollectionViewDelegateFlowLa
 
         let postMark = Post()
         postMark.name = "Mark Zucherberg"
-        postMark.statusText = "Status for mark will be here"
+        postMark.postStatusText = "Status for mark will be here 1 Status for mark will be here 1 Status for mark will be here 1 Status for mark will be here 1 Status for mark will be here 1 Status for mark will be here 1 Status for mark will be here 1 Status for mark will be here 1 Status for mark will be here 1 Status for mark will be here 1 Status for mark will be here 1 Status for mark will be here 1 Status for mark will be here 1 Status for mark will be here 1 Status for mark will be here 1 Status for mark will be here 1 Status for mark will be here 1 Status for mark will be here 1 Status for mark will be here 1 Status for mark will be here 1 NermeenMohamed Sheata Status for Steve Jobs  will be here Status for mark will be here 1 Status for mark will be here 1 Status for mark will be here 1 Status for mark will be here 1 Status for mark will be here 1 Status for mark will be here 1 Status for mark will be here 1 Status for mark will be here 1 Status for mark will be here 1 Status for mark will be here 1 Status for mark will be here 1 Status for mark will be here 1 Status for mark will be here 1 Status for mark will be here 1 Status for mark will be here 1 Status for mark will be here 1 Status for mark will be here 1 Status for mark will be here 1 Status for mark will be here 1 Status for mark will be here 1 NermeenMohamed Sheata Status for Steve Jobs  will be here  ya ahmed"
+        postMark.profileImageName =  R.image.zuckprofile.name
+        postMark.statusImageName = R.image.zuckdog.name
+        postMark.numLikes = 1000
+        postMark.numComments = 550
+        
         let postSteve = Post()
         postSteve.name = "Steve Jobs"
-        postSteve.statusText = "Status for Steve Jobs  will be here"
+        postSteve.postStatusText = "Status for Steve Jobs  will be here"
+        postSteve.profileImageName = R.image.steve_profile.name
+        postSteve.statusImageName = R.image.steve_status.name
+        postSteve.numLikes = 430
+        postSteve.numComments = 1000
+        
+        let postGhandi = Post()
+        postGhandi.name = "Ghandi"
+        
+        postGhandi.profileImageName = R.image.gandhi_profile.name
+        postGhandi.statusImageName = R.image.gandhi_status.name
+        postGhandi.numLikes = 80
+        postSteve.numComments = 300
+        
         posts.append(postMark)
         posts.append(postSteve)
+        posts.append(postGhandi)
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -82,7 +101,12 @@ class FeedController: UICollectionViewController ,UICollectionViewDelegateFlowLa
         return cell as! UICollectionViewCell
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: self.view.frame.width, height: 400)
+        if let statusText = posts[indexPath.row].postStatusText {
+            let rect = NSString(string: statusText).boundingRect(with: CGSize(width: self.view.frame.width, height: 1000), options: NSStringDrawingOptions.usesFontLeading.union(NSStringDrawingOptions.usesLineFragmentOrigin), attributes: [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 14)], context: nil)
+            let knownHeight : CGFloat = 8 + 44 + 4 + 4 + 200 + 8 + 24 + 8 + 44
+            return CGSize(width: self.view.frame.width, height: rect.height + knownHeight + 16)
+        }
+        return CGSize(width: self.view.frame.width, height: 500)
     }
 
     // MARK: UICollectionViewDelegate

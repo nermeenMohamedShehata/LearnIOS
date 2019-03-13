@@ -30,6 +30,8 @@ class FeedCell: UICollectionViewCell {
         textView.translatesAutoresizingMaskIntoConstraints = false
         textView.text = "Manazella : from dark side."
         textView.font = UIFont.systemFont(ofSize: 14)
+        textView.isScrollEnabled = false
+        textView.sizeToFit()
         return textView
     }()
     lazy private var statusImageView : UIImageView = {
@@ -83,9 +85,18 @@ class FeedCell: UICollectionViewCell {
                 
                 nameLabel.attributedText = attributedText
             }
-            if let statusText = post?.statusText {
+            if let statusText = post?.postStatusText {
                 self.statusTextView.text = statusText
             }
+            if let profileImage = post?.profileImageName {
+                self.profileImageView.image = UIImage(named: profileImage)
+            }
+            if let statusImageName = post?.statusImageName {
+                self.statusImageView.image = UIImage(named: statusImageName)
+            }
+//            if let numLikes = post?.numLikes{
+//                self.likesCommentLabel
+//            }
         }
     }
     static func buttonForTitle(title:String,imageName:String) -> UIButton {
@@ -152,7 +163,7 @@ class FeedCell: UICollectionViewCell {
             statusTextView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 4),
             statusTextView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -4),
             statusTextView.topAnchor.constraint(equalTo: profileImageView.bottomAnchor, constant: 4),
-            statusTextView.heightAnchor.constraint(equalToConstant: 30)
+//            statusTextView.heightAnchor.constraint(equalToConstant: 30)
             ])
     }
     private func setupStatusImageViewConstraints(){
