@@ -22,22 +22,7 @@ class FeedCell: UICollectionViewCell {
         label.numberOfLines = 0
         label.lineBreakMode = .byWordWrapping
         // color for each line
-        var attributedText  = NSMutableAttributedString(string: "Sample Text", attributes: [NSAttributedString.Key.font:UIFont.boldSystemFont(ofSize: 14)])
-        attributedText.append(NSAttributedString(string: "\nSeptemper - San Fransico * ", attributes: [NSAttributedString.Key.font:UIFont.systemFont(ofSize: 12),NSAttributedString.Key.foregroundColor:UIColor.rgb(red: 155, green: 161, blue: 171)]))
-        
-        // for space between 2 line
-        let paragraphStyle = NSMutableParagraphStyle()
-        paragraphStyle.lineSpacing = 4
-        attributedText.addAttribute(NSAttributedString.Key.paragraphStyle, value: paragraphStyle, range: NSMakeRange(0, attributedText.string.count))
-        
-        // attach image to second line
-        let attachment = NSTextAttachment()
-        attachment.image = UIImage(named: "globe_small")
-        attachment.bounds = CGRect(x: 0, y: -2, width: 12, height: 12)
-        attributedText.append(NSAttributedString(attachment: attachment))
-        
-        
-        label.attributedText = attributedText
+       
         return label
     }()
     lazy private var statusTextView : UITextView = {
@@ -78,7 +63,31 @@ class FeedCell: UICollectionViewCell {
     lazy var shareButton : UIButton = {
         return FeedCell.buttonForTitle(title: "Share", imageName: "share")
     }()
-   
+    var post : Post? {
+        didSet{
+            if let name = post?.name {
+                var attributedText  = NSMutableAttributedString(string: name, attributes: [NSAttributedString.Key.font:UIFont.boldSystemFont(ofSize: 14)])
+                attributedText.append(NSAttributedString(string: "\nSeptemper - San Fransico * ", attributes: [NSAttributedString.Key.font:UIFont.systemFont(ofSize: 12),NSAttributedString.Key.foregroundColor:UIColor.rgb(red: 155, green: 161, blue: 171)]))
+                
+                // for space between 2 line
+                let paragraphStyle = NSMutableParagraphStyle()
+                paragraphStyle.lineSpacing = 4
+                attributedText.addAttribute(NSAttributedString.Key.paragraphStyle, value: paragraphStyle, range: NSMakeRange(0, attributedText.string.count))
+                
+                // attach image to second line
+                let attachment = NSTextAttachment()
+                attachment.image = UIImage(named: "globe_small")
+                attachment.bounds = CGRect(x: 0, y: -2, width: 12, height: 12)
+                attributedText.append(NSAttributedString(attachment: attachment))
+                
+                
+                nameLabel.attributedText = attributedText
+            }
+            if let statusText = post?.statusText {
+                self.statusTextView.text = statusText
+            }
+        }
+    }
     static func buttonForTitle(title:String,imageName:String) -> UIButton {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -89,11 +98,13 @@ class FeedCell: UICollectionViewCell {
         button.titleEdgeInsets = UIEdgeInsets(top: 0, left: 8, bottom: 0, right: 0)
         return button
     }
+  
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupLayout()
+
     }
-    
+
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -192,5 +203,10 @@ class FeedCell: UICollectionViewCell {
             shareButton.heightAnchor.constraint(equalToConstant: 44),
             shareButton.topAnchor.constraint(equalTo: divideLineView.bottomAnchor, constant: 0),
             ])
+    }
+}
+extension FeedCell : FeedCellView{
+    func setPost(post: Post) {
+        self.post = post
     }
 }

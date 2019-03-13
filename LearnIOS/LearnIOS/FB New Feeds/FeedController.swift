@@ -7,22 +7,33 @@
 //
 
 import UIKit
-
+protocol FeedCellView {
+    func setPost(post:Post)
+}
 
 class FeedController: UICollectionViewController ,UICollectionViewDelegateFlowLayout{
     private let feedCellIdentifier = "feedCell"
+    
+    var posts = [Post]()
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        let postMark = Post()
+        postMark.name = "Mark Zucherberg"
+        postMark.statusText = "Status for mark will be here"
+        let postSteve = Post()
+        postSteve.name = "Steve Jobs"
+        postSteve.statusText = "Status for Steve Jobs  will be here"
+        posts.append(postMark)
+        posts.append(postSteve)
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
-      
-        
     }
     override func viewWillAppear(_ animated: Bool) {
         //nav bar
-        self.navigationItem.title = "FaceBook"
+        self.navigationItem.title = "FaceBook Feed"
         //collectionview
         let layout = UICollectionViewFlowLayout()
         collectionView = UICollectionView(frame: self.view.frame, collectionViewLayout: layout)
@@ -59,14 +70,16 @@ class FeedController: UICollectionViewController ,UICollectionViewDelegateFlowLa
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return 3
+        return posts.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: feedCellIdentifier, for: indexPath) as! FeedCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: feedCellIdentifier, for: indexPath) as! FeedCellView
+        cell.setPost(post: posts[indexPath.row])
+       
         // Configure the cell
     
-        return cell
+        return cell as! UICollectionViewCell
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: self.view.frame.width, height: 400)
