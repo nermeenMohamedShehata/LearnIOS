@@ -19,9 +19,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
         application.statusBarStyle = .lightContent
+        UITabBar.appearance().tintColor = UIColor.rgb(red: 70, green: 146, blue: 250)
     //    openEntryListVC()
 //        openQuestionVC()
-        openFBNewFeedsVC()
+//        openFBNewFeedsVC()
+        openCustomTabBar()
         return true
     }
     func openCaurslPage(){
@@ -54,6 +56,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().barTintColor = UIColor(red: 51/255, green: 90/255, blue: 145/255, alpha: 1)
         UINavigationBar.appearance().tintColor = .white
         UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.white]
+    }
+    func openCustomTabBar(){
+        window?.rootViewController = CustomTabBarController()
     }
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

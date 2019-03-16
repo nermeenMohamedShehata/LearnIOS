@@ -31,6 +31,7 @@
 		8AA47AC22237CC1600B6C0E1 /* Utilits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA47AC12237CC1600B6C0E1 /* Utilits.swift */; };
 		8AA47AC422381A9500B6C0E1 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA47AC322381A9500B6C0E1 /* Post.swift */; };
 		8AFFC2A722398AC00066BC7D /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFFC2A622398AC00066BC7D /* R.generated.swift */; };
+		8AFFC2AB223D0E8F0066BC7D /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFFC2AA223D0E8F0066BC7D /* CustomTabBarController.swift */; };
 		99DA002B2614C280C07AE828 /* Pods_LearnIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C7F174B19C1095219BF5A4E /* Pods_LearnIOS.framework */; };
 		F0BF85CCAB433EB3023A8225 /* Pods_LearnIOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A991DC45597A22361D5D871F /* Pods_LearnIOSTests.framework */; };
 /* End PBXBuildFile section */
@@ -77,6 +78,7 @@
 		8AA47AC12237CC1600B6C0E1 /* Utilits.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilits.swift; sourceTree = "<group>"; };
 		8AA47AC322381A9500B6C0E1 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		8AFFC2A622398AC00066BC7D /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
+		8AFFC2AA223D0E8F0066BC7D /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
 		A991DC45597A22361D5D871F /* Pods_LearnIOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LearnIOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD40448BD317723378D4A71F /* Pods-LearnIOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearnIOS.debug.xcconfig"; path = "Target Support Files/Pods-LearnIOS/Pods-LearnIOS.debug.xcconfig"; sourceTree = "<group>"; };
 		F7488A442526E7D1F8F32816 /* Pods-LearnIOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearnIOS.release.xcconfig"; path = "Target Support Files/Pods-LearnIOS/Pods-LearnIOS.release.xcconfig"; sourceTree = "<group>"; };
@@ -214,6 +216,7 @@
 				8AA47ABE2236F1AB00B6C0E1 /* FeedCell.swift */,
 				8AA47ABC2236EE8E00B6C0E1 /* FBSummryLearn.swift */,
 				8AA47AC322381A9500B6C0E1 /* Post.swift */,
+				8AFFC2AA223D0E8F0066BC7D /* CustomTabBarController.swift */,
 			);
 			path = "FB New Feeds";
 			sourceTree = "<group>";
@@ -447,6 +450,7 @@
 				8A26E2DD22346C8800E97351 /* ToDoListVC.swift in Sources */,
 				8A26E2EB223592A600E97351 /* QuestionCell.swift in Sources */,
 				8AA47AB22236711500B6C0E1 /* QuestionLearn.swift in Sources */,
+				8AFFC2AB223D0E8F0066BC7D /* CustomTabBarController.swift in Sources */,
 				8A26E2D52234526E00E97351 /* CustomCell.swift in Sources */,
 				8A26E2B52234379700E97351 /* AppDelegate.swift in Sources */,
 				8A26E2E622357D7700E97351 /* EntryListVC.swift in Sources */,
