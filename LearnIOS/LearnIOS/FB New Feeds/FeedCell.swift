@@ -94,6 +94,11 @@ class FeedCell: UICollectionViewCell {
             if let statusImageName = post?.statusImageName {
                 self.statusImageView.image = UIImage(named: statusImageName)
             }
+            statusImageView.image = nil
+            if let statusUmageURL = post?.statusImageURL{
+                
+            }
+            
 //            if let numLikes = post?.numLikes{
 //                self.likesCommentLabel
 //            }

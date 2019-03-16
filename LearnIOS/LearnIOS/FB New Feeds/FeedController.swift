@@ -18,33 +18,46 @@ class FeedController: UICollectionViewController ,UICollectionViewDelegateFlowLa
     override func viewDidLoad() {
         super.viewDidLoad()
 
+     //  memoryCapacity will get purged after app is terminated. Disk won't. Next time you launch, app will restore the cache from disk
+        // increasing cache size to 500 MB
+        let memoryCapacity = 500 * 1024 * 1024
+        let diskCapacity = 500 * 1024 * 1024
+        let cache = URLCache(memoryCapacity: memoryCapacity, diskCapacity: diskCapacity, diskPath: "myDataPath")
+        URLCache.shared = cache
+        
+        
         let postMark = Post()
-        postMark.name = "Mark Zucherberg"
-        postMark.postStatusText = "Status for mark will be here 1 Status for mark will be here 1 Status for mark will be here 1 Status for mark will be here 1 Status for mark will be here 1 Status for mark will be here 1 Status for mark will be here 1 Status for mark will be here 1 Status for mark will be here 1 Status for mark will be here 1 Status for mark will be here 1 Status for mark will be here 1 Status for mark will be here 1 Status for mark will be here 1 Status for mark will be here 1 Status for mark will be here 1 Status for mark will be here 1 Status for mark will be here 1 Status for mark will be here 1 Status for mark will be here 1 NermeenMohamed Sheata Status for Steve Jobs  will be here Status for mark will be here 1 Status for mark will be here 1 Status for mark will be here 1 Status for mark will be here 1 Status for mark will be here 1 Status for mark will be here 1 Status for mark will be here 1 Status for mark will be here 1 Status for mark will be here 1 Status for mark will be here 1 Status for mark will be here 1 Status for mark will be here 1 Status for mark will be here 1 Status for mark will be here 1 Status for mark will be here 1 Status for mark will be here 1 Status for mark will be here 1 Status for mark will be here 1 Status for mark will be here 1 Status for mark will be here 1 NermeenMohamed Sheata Status for Steve Jobs  will be here  ya ahmed"
-        postMark.profileImageName =  R.image.zuckprofile.name
-        postMark.statusImageName = R.image.zuckdog.name
-        postMark.numLikes = 1000
-        postMark.numComments = 550
+        postMark.name = "Mark Zuckerberg"
+        postMark.profileImageName = "zuckprofile"
+        postMark.postStatusText = "By giving people the power to share, we're making the world more transparent."
+        postMark.statusImageName = "zuckdog"
+        postMark.numLikes = 400
+        postMark.numComments = 123
         
         let postSteve = Post()
         postSteve.name = "Steve Jobs"
-        postSteve.postStatusText = "Status for Steve Jobs  will be here"
-        postSteve.profileImageName = R.image.steve_profile.name
-        postSteve.statusImageName = R.image.steve_status.name
-        postSteve.numLikes = 430
-        postSteve.numComments = 1000
+        postSteve.profileImageName = "steve_profile"
+        postSteve.postStatusText = "Design is not just what it looks like and feels like. Design is how it works.\n\n" +
+            "Being the richest man in the cemetery doesn't matter to me. Going to bed at night saying we've done something wonderful, that's what matters to me.\n\n" +
+        "Sometimes when you innovate, you make mistakes. It is best to admit them quickly, and get on with improving your other innovations."
+        postSteve.statusImageName = "steve_status"
+        postSteve.numLikes = 1000
+        postSteve.numComments = 55
         
-        let postGhandi = Post()
-        postGhandi.name = "Ghandi"
+        let postGandhi = Post()
+        postGandhi.name = "Mahatma Gandhi"
+        postGandhi.profileImageName = "gandhi_profile"
+        postGandhi.postStatusText = "Live as if you were to die tomorrow; learn as if you were to live forever.\n" +
+            "The weak can never forgive. Forgiveness is the attribute of the strong.\n" +
+        "Happiness is when what you think, what you say, and what you do are in harmony."
+        postGandhi.statusImageName = "gandhi_status"
+        postGandhi.numLikes = 333
+        postGandhi.numComments = 22
         
-        postGhandi.profileImageName = R.image.gandhi_profile.name
-        postGhandi.statusImageName = R.image.gandhi_status.name
-        postGhandi.numLikes = 80
-        postSteve.numComments = 300
         
         posts.append(postMark)
         posts.append(postSteve)
-        posts.append(postGhandi)
+        posts.append(postGandhi)
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
