@@ -14,24 +14,28 @@
 		8A26E2CA2234379A00E97351 /* LearnIOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A26E2C92234379A00E97351 /* LearnIOSTests.swift */; };
 		8A26E2D52234526E00E97351 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A26E2D42234526E00E97351 /* CustomCell.swift */; };
 		8A26E2D82234671E00E97351 /* CaursolVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A26E2D72234671E00E97351 /* CaursolVC.swift */; };
-		8A26E2DD22346C8800E97351 /* ToDoListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A26E2DC22346C8800E97351 /* ToDoListVC.swift */; };
-		8A26E2DF22346CBE00E97351 /* ToDoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A26E2DE22346CBE00E97351 /* ToDoCell.swift */; };
-		8A26E2E1223472BA00E97351 /* ToDoHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A26E2E0223472BA00E97351 /* ToDoHeaderCell.swift */; };
 		8A26E2E422357A6500E97351 /* EntryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A26E2E322357A6500E97351 /* EntryCell.swift */; };
 		8A26E2E622357D7700E97351 /* EntryListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A26E2E522357D7700E97351 /* EntryListVC.swift */; };
-		8A26E2E922358E5300E97351 /* QuestionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A26E2E822358E5300E97351 /* QuestionController.swift */; };
-		8A26E2EB223592A600E97351 /* QuestionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A26E2EA223592A600E97351 /* QuestionCell.swift */; };
-		8A26E2ED223594DF00E97351 /* QuestionHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A26E2EC223594DF00E97351 /* QuestionHeaderCell.swift */; };
-		8AA47AB22236711500B6C0E1 /* QuestionLearn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA47AB12236711500B6C0E1 /* QuestionLearn.swift */; };
-		8AA47AB622367E0300B6C0E1 /* ResultsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA47AB522367E0300B6C0E1 /* ResultsVC.swift */; };
-		8AA47AB8223684FD00B6C0E1 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA47AB7223684FD00B6C0E1 /* Question.swift */; };
-		8AA47ABB2236EE0700B6C0E1 /* FeedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA47ABA2236EE0700B6C0E1 /* FeedController.swift */; };
-		8AA47ABD2236EE8E00B6C0E1 /* FBSummryLearn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA47ABC2236EE8E00B6C0E1 /* FBSummryLearn.swift */; };
-		8AA47ABF2236F1AB00B6C0E1 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA47ABE2236F1AB00B6C0E1 /* FeedCell.swift */; };
-		8AA47AC22237CC1600B6C0E1 /* Utilits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA47AC12237CC1600B6C0E1 /* Utilits.swift */; };
-		8AA47AC422381A9500B6C0E1 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA47AC322381A9500B6C0E1 /* Post.swift */; };
-		8AFFC2A722398AC00066BC7D /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFFC2A622398AC00066BC7D /* R.generated.swift */; };
-		8AFFC2AB223D0E8F0066BC7D /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFFC2AA223D0E8F0066BC7D /* CustomTabBarController.swift */; };
+		8A7B1D8D22400B2300E02FF6 /* MenuBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7B1D8922400B2200E02FF6 /* MenuBar.swift */; };
+		8A7B1D8E22400B2300E02FF6 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7B1D8A22400B2200E02FF6 /* HomeController.swift */; };
+		8A7B1D8F22400B2300E02FF6 /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7B1D8B22400B2200E02FF6 /* MenuCell.swift */; };
+		8A7B1D9022400B2300E02FF6 /* VideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7B1D8C22400B2200E02FF6 /* VideoCell.swift */; };
+		8A7B1D9A22400BF100E02FF6 /* FBSummryLearn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7B1D9522400BF100E02FF6 /* FBSummryLearn.swift */; };
+		8A7B1D9B22400BF100E02FF6 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7B1D9622400BF100E02FF6 /* CustomTabBarController.swift */; };
+		8A7B1D9C22400BF100E02FF6 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7B1D9722400BF100E02FF6 /* FeedCell.swift */; };
+		8A7B1D9D22400BF100E02FF6 /* FeedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7B1D9822400BF100E02FF6 /* FeedController.swift */; };
+		8A7B1D9E22400BF100E02FF6 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7B1D9922400BF100E02FF6 /* Post.swift */; };
+		8A7B1DB122400C3500E02FF6 /* QuestionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7B1DAB22400C3500E02FF6 /* QuestionController.swift */; };
+		8A7B1DB222400C3500E02FF6 /* ResultsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7B1DAC22400C3500E02FF6 /* ResultsVC.swift */; };
+		8A7B1DB322400C3500E02FF6 /* QuestionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7B1DAD22400C3500E02FF6 /* QuestionCell.swift */; };
+		8A7B1DB422400C3500E02FF6 /* QuestionHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7B1DAE22400C3500E02FF6 /* QuestionHeaderCell.swift */; };
+		8A7B1DB522400C3500E02FF6 /* QuestionLearn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7B1DAF22400C3500E02FF6 /* QuestionLearn.swift */; };
+		8A7B1DB622400C3500E02FF6 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7B1DB022400C3500E02FF6 /* Question.swift */; };
+		8A7B1DBA22400C6200E02FF6 /* ToDoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7B1DB722400C6200E02FF6 /* ToDoCell.swift */; };
+		8A7B1DBB22400C6200E02FF6 /* ToDoHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7B1DB822400C6200E02FF6 /* ToDoHeaderCell.swift */; };
+		8A7B1DBC22400C6200E02FF6 /* ToDoListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7B1DB922400C6200E02FF6 /* ToDoListVC.swift */; };
+		8A7B1DBE22400CDE00E02FF6 /* Utilits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7B1DBD22400CDE00E02FF6 /* Utilits.swift */; };
+		8A7B1DC122400D9000E02FF6 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7B1DC022400D9000E02FF6 /* R.generated.swift */; };
 		99DA002B2614C280C07AE828 /* Pods_LearnIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C7F174B19C1095219BF5A4E /* Pods_LearnIOS.framework */; };
 		F0BF85CCAB433EB3023A8225 /* Pods_LearnIOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A991DC45597A22361D5D871F /* Pods_LearnIOSTests.framework */; };
 /* End PBXBuildFile section */
@@ -61,24 +65,29 @@
 		8A26E2CB2234379A00E97351 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8A26E2D42234526E00E97351 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		8A26E2D72234671E00E97351 /* CaursolVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaursolVC.swift; sourceTree = "<group>"; };
-		8A26E2DC22346C8800E97351 /* ToDoListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListVC.swift; sourceTree = "<group>"; };
-		8A26E2DE22346CBE00E97351 /* ToDoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoCell.swift; sourceTree = "<group>"; };
-		8A26E2E0223472BA00E97351 /* ToDoHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoHeaderCell.swift; sourceTree = "<group>"; };
 		8A26E2E322357A6500E97351 /* EntryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryCell.swift; sourceTree = "<group>"; };
 		8A26E2E522357D7700E97351 /* EntryListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryListVC.swift; sourceTree = "<group>"; };
-		8A26E2E822358E5300E97351 /* QuestionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionController.swift; sourceTree = "<group>"; };
-		8A26E2EA223592A600E97351 /* QuestionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionCell.swift; sourceTree = "<group>"; };
-		8A26E2EC223594DF00E97351 /* QuestionHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionHeaderCell.swift; sourceTree = "<group>"; };
-		8AA47AB12236711500B6C0E1 /* QuestionLearn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionLearn.swift; sourceTree = "<group>"; };
-		8AA47AB522367E0300B6C0E1 /* ResultsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsVC.swift; sourceTree = "<group>"; };
-		8AA47AB7223684FD00B6C0E1 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
-		8AA47ABA2236EE0700B6C0E1 /* FeedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedController.swift; sourceTree = "<group>"; };
-		8AA47ABC2236EE8E00B6C0E1 /* FBSummryLearn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBSummryLearn.swift; sourceTree = "<group>"; };
-		8AA47ABE2236F1AB00B6C0E1 /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
-		8AA47AC12237CC1600B6C0E1 /* Utilits.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilits.swift; sourceTree = "<group>"; };
-		8AA47AC322381A9500B6C0E1 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
-		8AFFC2A622398AC00066BC7D /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
-		8AFFC2AA223D0E8F0066BC7D /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
+		8A7B1D8922400B2200E02FF6 /* MenuBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuBar.swift; sourceTree = "<group>"; };
+		8A7B1D8A22400B2200E02FF6 /* HomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
+		8A7B1D8B22400B2200E02FF6 /* MenuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
+		8A7B1D8C22400B2200E02FF6 /* VideoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoCell.swift; sourceTree = "<group>"; };
+		8A7B1D9522400BF100E02FF6 /* FBSummryLearn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBSummryLearn.swift; sourceTree = "<group>"; };
+		8A7B1D9622400BF100E02FF6 /* CustomTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
+		8A7B1D9722400BF100E02FF6 /* FeedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
+		8A7B1D9822400BF100E02FF6 /* FeedController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedController.swift; sourceTree = "<group>"; };
+		8A7B1D9922400BF100E02FF6 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		8A7B1DAB22400C3500E02FF6 /* QuestionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionController.swift; sourceTree = "<group>"; };
+		8A7B1DAC22400C3500E02FF6 /* ResultsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsVC.swift; sourceTree = "<group>"; };
+		8A7B1DAD22400C3500E02FF6 /* QuestionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionCell.swift; sourceTree = "<group>"; };
+		8A7B1DAE22400C3500E02FF6 /* QuestionHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionHeaderCell.swift; sourceTree = "<group>"; };
+		8A7B1DAF22400C3500E02FF6 /* QuestionLearn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionLearn.swift; sourceTree = "<group>"; };
+		8A7B1DB022400C3500E02FF6 /* Question.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		8A7B1DB722400C6200E02FF6 /* ToDoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDoCell.swift; sourceTree = "<group>"; };
+		8A7B1DB822400C6200E02FF6 /* ToDoHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDoHeaderCell.swift; sourceTree = "<group>"; };
+		8A7B1DB922400C6200E02FF6 /* ToDoListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDoListVC.swift; sourceTree = "<group>"; };
+		8A7B1DBD22400CDE00E02FF6 /* Utilits.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilits.swift; sourceTree = "<group>"; };
+		8A7B1DC022400D9000E02FF6 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
+		8A7B1DC222400FD700E02FF6 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		A991DC45597A22361D5D871F /* Pods_LearnIOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LearnIOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD40448BD317723378D4A71F /* Pods-LearnIOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearnIOS.debug.xcconfig"; path = "Target Support Files/Pods-LearnIOS/Pods-LearnIOS.debug.xcconfig"; sourceTree = "<group>"; };
 		F7488A442526E7D1F8F32816 /* Pods-LearnIOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearnIOS.release.xcconfig"; path = "Target Support Files/Pods-LearnIOS/Pods-LearnIOS.release.xcconfig"; sourceTree = "<group>"; };
@@ -136,8 +145,9 @@
 		8A26E2B32234379700E97351 /* LearnIOS */ = {
 			isa = PBXGroup;
 			children = (
-				8AA47AC02237CC0100B6C0E1 /* Helper */,
-				8AA47AB92236ED4E00B6C0E1 /* FB New Feeds */,
+				8A7B1D9422400BD900E02FF6 /* FB New Feeds */,
+				8A7B1D9122400B2E00E02FF6 /* Helper */,
+				8A7B1D8822400B0800E02FF6 /* YouTube */,
 				8A26E2E722358E2A00E97351 /* Questionnaire App */,
 				8A26E2E222357A3D00E97351 /* RSS Reader */,
 				8A26E2DB22346C6400E97351 /* TO DO List */,
@@ -180,9 +190,9 @@
 		8A26E2DB22346C6400E97351 /* TO DO List */ = {
 			isa = PBXGroup;
 			children = (
-				8A26E2DC22346C8800E97351 /* ToDoListVC.swift */,
-				8A26E2DE22346CBE00E97351 /* ToDoCell.swift */,
-				8A26E2E0223472BA00E97351 /* ToDoHeaderCell.swift */,
+				8A7B1DB722400C6200E02FF6 /* ToDoCell.swift */,
+				8A7B1DB822400C6200E02FF6 /* ToDoHeaderCell.swift */,
+				8A7B1DB922400C6200E02FF6 /* ToDoListVC.swift */,
 			);
 			path = "TO DO List";
 			sourceTree = "<group>";
@@ -199,35 +209,46 @@
 		8A26E2E722358E2A00E97351 /* Questionnaire App */ = {
 			isa = PBXGroup;
 			children = (
-				8A26E2E822358E5300E97351 /* QuestionController.swift */,
-				8A26E2EA223592A600E97351 /* QuestionCell.swift */,
-				8A26E2EC223594DF00E97351 /* QuestionHeaderCell.swift */,
-				8AA47AB522367E0300B6C0E1 /* ResultsVC.swift */,
-				8AA47AB7223684FD00B6C0E1 /* Question.swift */,
-				8AA47AB12236711500B6C0E1 /* QuestionLearn.swift */,
+				8A7B1DB022400C3500E02FF6 /* Question.swift */,
+				8A7B1DAD22400C3500E02FF6 /* QuestionCell.swift */,
+				8A7B1DAB22400C3500E02FF6 /* QuestionController.swift */,
+				8A7B1DAE22400C3500E02FF6 /* QuestionHeaderCell.swift */,
+				8A7B1DAF22400C3500E02FF6 /* QuestionLearn.swift */,
+				8A7B1DAC22400C3500E02FF6 /* ResultsVC.swift */,
 			);
 			path = "Questionnaire App";
 			sourceTree = "<group>";
 		};
-		8AA47AB92236ED4E00B6C0E1 /* FB New Feeds */ = {
+		8A7B1D8822400B0800E02FF6 /* YouTube */ = {
 			isa = PBXGroup;
 			children = (
-				8AA47ABA2236EE0700B6C0E1 /* FeedController.swift */,
-				8AA47ABE2236F1AB00B6C0E1 /* FeedCell.swift */,
-				8AA47ABC2236EE8E00B6C0E1 /* FBSummryLearn.swift */,
-				8AA47AC322381A9500B6C0E1 /* Post.swift */,
-				8AFFC2AA223D0E8F0066BC7D /* CustomTabBarController.swift */,
+				8A7B1D8A22400B2200E02FF6 /* HomeController.swift */,
+				8A7B1D8922400B2200E02FF6 /* MenuBar.swift */,
+				8A7B1D8B22400B2200E02FF6 /* MenuCell.swift */,
+				8A7B1D8C22400B2200E02FF6 /* VideoCell.swift */,
 			);
-			path = "FB New Feeds";
+			path = YouTube;
 			sourceTree = "<group>";
 		};
-		8AA47AC02237CC0100B6C0E1 /* Helper */ = {
+		8A7B1D9122400B2E00E02FF6 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
-				8AFFC2A622398AC00066BC7D /* R.generated.swift */,
-				8AA47AC12237CC1600B6C0E1 /* Utilits.swift */,
+				8A7B1DC022400D9000E02FF6 /* R.generated.swift */,
+				8A7B1DBD22400CDE00E02FF6 /* Utilits.swift */,
 			);
 			path = Helper;
+			sourceTree = "<group>";
+		};
+		8A7B1D9422400BD900E02FF6 /* FB New Feeds */ = {
+			isa = PBXGroup;
+			children = (
+				8A7B1D9622400BF100E02FF6 /* CustomTabBarController.swift */,
+				8A7B1D9522400BF100E02FF6 /* FBSummryLearn.swift */,
+				8A7B1D9722400BF100E02FF6 /* FeedCell.swift */,
+				8A7B1D9822400BF100E02FF6 /* FeedController.swift */,
+				8A7B1D9922400BF100E02FF6 /* Post.swift */,
+			);
+			path = "FB New Feeds";
 			sourceTree = "<group>";
 		};
 		F5DD6094DF5D4E4C75BEFDE8 /* Pods */ = {
@@ -249,11 +270,11 @@
 			buildConfigurationList = 8A26E2CE2234379A00E97351 /* Build configuration list for PBXNativeTarget "LearnIOS" */;
 			buildPhases = (
 				695EB8A980F8ABC1F966F75D /* [CP] Check Pods Manifest.lock */,
-				8AFFC2A522398A0C0066BC7D /* Rswift */,
+				8A7B1DBF22400D2B00E02FF6 /* RSwift */,
 				8A26E2AD2234379700E97351 /* Sources */,
 				8A26E2AE2234379700E97351 /* Frameworks */,
 				8A26E2AF2234379700E97351 /* Resources */,
-				C91EBBB6538F469DEFFF8346 /* [CP] Embed Pods Frameworks */,
+				0DA63E18E9B16156B815081C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -341,6 +362,28 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0DA63E18E9B16156B815081C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LearnIOS/Pods-LearnIOS-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LearnIOS/Pods-LearnIOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		695EB8A980F8ABC1F966F75D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -363,7 +406,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		8AFFC2A522398A0C0066BC7D /* Rswift */ = {
+		8A7B1DBF22400D2B00E02FF6 /* RSwift */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -373,7 +416,7 @@
 			inputPaths = (
 				"$TEMP_DIR/rswift-lastrun",
 			);
-			name = Rswift;
+			name = RSwift;
 			outputFileListPaths = (
 			);
 			outputPaths = (
@@ -405,28 +448,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C91EBBB6538F469DEFFF8346 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-LearnIOS/Pods-LearnIOS-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LearnIOS/Pods-LearnIOS-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -434,28 +455,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8AA47AB8223684FD00B6C0E1 /* Question.swift in Sources */,
+				8A7B1DBE22400CDE00E02FF6 /* Utilits.swift in Sources */,
+				8A7B1D9D22400BF100E02FF6 /* FeedController.swift in Sources */,
 				8A26E2D82234671E00E97351 /* CaursolVC.swift in Sources */,
-				8A26E2E1223472BA00E97351 /* ToDoHeaderCell.swift in Sources */,
-				8AA47ABD2236EE8E00B6C0E1 /* FBSummryLearn.swift in Sources */,
-				8A26E2DF22346CBE00E97351 /* ToDoCell.swift in Sources */,
+				8A7B1D9E22400BF100E02FF6 /* Post.swift in Sources */,
+				8A7B1DB322400C3500E02FF6 /* QuestionCell.swift in Sources */,
+				8A7B1D8F22400B2300E02FF6 /* MenuCell.swift in Sources */,
+				8A7B1D8D22400B2300E02FF6 /* MenuBar.swift in Sources */,
+				8A7B1DBC22400C6200E02FF6 /* ToDoListVC.swift in Sources */,
+				8A7B1DB122400C3500E02FF6 /* QuestionController.swift in Sources */,
+				8A7B1D9A22400BF100E02FF6 /* FBSummryLearn.swift in Sources */,
+				8A7B1DB622400C3500E02FF6 /* Question.swift in Sources */,
 				8A26E2B72234379700E97351 /* CustomCollectionView.swift in Sources */,
-				8AA47AC22237CC1600B6C0E1 /* Utilits.swift in Sources */,
-				8A26E2ED223594DF00E97351 /* QuestionHeaderCell.swift in Sources */,
-				8AFFC2A722398AC00066BC7D /* R.generated.swift in Sources */,
+				8A7B1D9B22400BF100E02FF6 /* CustomTabBarController.swift in Sources */,
 				8A26E2E422357A6500E97351 /* EntryCell.swift in Sources */,
-				8AA47ABB2236EE0700B6C0E1 /* FeedController.swift in Sources */,
-				8A26E2E922358E5300E97351 /* QuestionController.swift in Sources */,
-				8AA47AB622367E0300B6C0E1 /* ResultsVC.swift in Sources */,
-				8A26E2DD22346C8800E97351 /* ToDoListVC.swift in Sources */,
-				8A26E2EB223592A600E97351 /* QuestionCell.swift in Sources */,
-				8AA47AB22236711500B6C0E1 /* QuestionLearn.swift in Sources */,
-				8AFFC2AB223D0E8F0066BC7D /* CustomTabBarController.swift in Sources */,
+				8A7B1DBB22400C6200E02FF6 /* ToDoHeaderCell.swift in Sources */,
+				8A7B1D8E22400B2300E02FF6 /* HomeController.swift in Sources */,
+				8A7B1DB222400C3500E02FF6 /* ResultsVC.swift in Sources */,
+				8A7B1DB522400C3500E02FF6 /* QuestionLearn.swift in Sources */,
+				8A7B1DBA22400C6200E02FF6 /* ToDoCell.swift in Sources */,
+				8A7B1DC122400D9000E02FF6 /* R.generated.swift in Sources */,
+				8A7B1D9C22400BF100E02FF6 /* FeedCell.swift in Sources */,
+				8A7B1D9022400B2300E02FF6 /* VideoCell.swift in Sources */,
 				8A26E2D52234526E00E97351 /* CustomCell.swift in Sources */,
 				8A26E2B52234379700E97351 /* AppDelegate.swift in Sources */,
+				8A7B1DB422400C3500E02FF6 /* QuestionHeaderCell.swift in Sources */,
 				8A26E2E622357D7700E97351 /* EntryListVC.swift in Sources */,
-				8AA47ABF2236F1AB00B6C0E1 /* FeedCell.swift in Sources */,
-				8AA47AC422381A9500B6C0E1 /* Post.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -482,6 +507,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				8A26E2BE2234379A00E97351 /* Base */,
+				8A7B1DC222400FD700E02FF6 /* ar */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -493,6 +519,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -554,6 +581,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

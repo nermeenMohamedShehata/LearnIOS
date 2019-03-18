@@ -6,7 +6,8 @@ target 'LearnIOS' do
   use_frameworks!
 
   # Pods for LearnIOS
-    pod 'R.swift'
+#change in pods
+  pod 'R.swift'
   target 'LearnIOSTests' do
     inherit! :search_paths
     # Pods for testing

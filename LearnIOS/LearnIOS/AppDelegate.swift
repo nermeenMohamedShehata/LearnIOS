@@ -20,21 +20,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.makeKeyAndVisible()
         application.statusBarStyle = .lightContent
         UITabBar.appearance().tintColor = UIColor.rgb(red: 70, green: 146, blue: 250)
-    //    openEntryListVC()
-//        openQuestionVC()
-//        openFBNewFeedsVC()
-        openCustomTabBar()
+        //    openEntryListVC()
+        //        openQuestionVC()
+        // L102Localizer.DoTheMagic()
+        
+       // openFBNewFeedsVC()
+        //        openCustomTabBar()
+                openYouTubeHome()
+
         return true
     }
     func openCaurslPage(){
         //   let pageVC = ProjectPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
-
+        
     }
     func todoListVC() {
         let flowLayout = UICollectionViewLayout()
         let toDoListVC = ToDoListVC(collectionViewLayout: flowLayout)
         window?.rootViewController = UINavigationController(rootViewController: toDoListVC)
-
+        
     }
     func openEntryListVC(){
         let flowLayout = UICollectionViewLayout()
@@ -47,7 +51,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().barTintColor = UIColor.orange
         UINavigationBar.appearance().tintColor = UIColor.white
         UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.white]
-
+        
     }
     func openFBNewFeedsVC(){
         let flowLayout = UICollectionViewLayout()
@@ -59,6 +63,34 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     func openCustomTabBar(){
         window?.rootViewController = CustomTabBarController()
+        
+    }
+    /*
+     YouTube App
+     */
+    open func openYouTubeHome(){
+        let flowLayout = UICollectionViewFlowLayout()
+        let vc = HomeController(collectionViewLayout: flowLayout)
+        let navController = UINavigationController(rootViewController: vc)
+        window?.rootViewController = navController
+        UINavigationBar.appearance().barTintColor = UIColor(red: 230/255, green: 32/255, blue: 31/255, alpha: 1)
+        UINavigationBar.appearance().tintColor = .white
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.white]
+        UINavigationBar.appearance().shadowImage = UIImage()
+        UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
+        
+        
+        let statusBarBackgroundView = UIView()
+        statusBarBackgroundView.backgroundColor = UIColor.rgb(red: 194, green: 31, blue: 31)
+        
+        window?.addSubview(statusBarBackgroundView)
+        window?.addConstraintsWithFormat("H:|[v0]|",views:statusBarBackgroundView)
+        window?.addConstraints([
+            statusBarBackgroundView.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width),
+            statusBarBackgroundView.heightAnchor.constraint(equalToConstant: 20),
+            ])
+        window?.addConstraintsWithFormat("V:|[v0(20)]",views:statusBarBackgroundView)
+        
     }
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
