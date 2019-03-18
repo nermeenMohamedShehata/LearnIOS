@@ -36,6 +36,7 @@
 		8A7B1DBC22400C6200E02FF6 /* ToDoListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7B1DB922400C6200E02FF6 /* ToDoListVC.swift */; };
 		8A7B1DBE22400CDE00E02FF6 /* Utilits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7B1DBD22400CDE00E02FF6 /* Utilits.swift */; };
 		8A7B1DC122400D9000E02FF6 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7B1DC022400D9000E02FF6 /* R.generated.swift */; };
+		8A7B1DC4224019C700E02FF6 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7B1DC3224019C700E02FF6 /* Video.swift */; };
 		99DA002B2614C280C07AE828 /* Pods_LearnIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C7F174B19C1095219BF5A4E /* Pods_LearnIOS.framework */; };
 		F0BF85CCAB433EB3023A8225 /* Pods_LearnIOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A991DC45597A22361D5D871F /* Pods_LearnIOSTests.framework */; };
 /* End PBXBuildFile section */
@@ -88,6 +89,7 @@
 		8A7B1DBD22400CDE00E02FF6 /* Utilits.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilits.swift; sourceTree = "<group>"; };
 		8A7B1DC022400D9000E02FF6 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		8A7B1DC222400FD700E02FF6 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		8A7B1DC3224019C700E02FF6 /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 		A991DC45597A22361D5D871F /* Pods_LearnIOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LearnIOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD40448BD317723378D4A71F /* Pods-LearnIOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearnIOS.debug.xcconfig"; path = "Target Support Files/Pods-LearnIOS/Pods-LearnIOS.debug.xcconfig"; sourceTree = "<group>"; };
 		F7488A442526E7D1F8F32816 /* Pods-LearnIOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearnIOS.release.xcconfig"; path = "Target Support Files/Pods-LearnIOS/Pods-LearnIOS.release.xcconfig"; sourceTree = "<group>"; };
@@ -226,6 +228,7 @@
 				8A7B1D8922400B2200E02FF6 /* MenuBar.swift */,
 				8A7B1D8B22400B2200E02FF6 /* MenuCell.swift */,
 				8A7B1D8C22400B2200E02FF6 /* VideoCell.swift */,
+				8A7B1DC3224019C700E02FF6 /* Video.swift */,
 			);
 			path = YouTube;
 			sourceTree = "<group>";
@@ -459,6 +462,7 @@
 				8A7B1D9D22400BF100E02FF6 /* FeedController.swift in Sources */,
 				8A26E2D82234671E00E97351 /* CaursolVC.swift in Sources */,
 				8A7B1D9E22400BF100E02FF6 /* Post.swift in Sources */,
+				8A7B1DC4224019C700E02FF6 /* Video.swift in Sources */,
 				8A7B1DB322400C3500E02FF6 /* QuestionCell.swift in Sources */,
 				8A7B1D8F22400B2300E02FF6 /* MenuCell.swift in Sources */,
 				8A7B1D8D22400B2300E02FF6 /* MenuBar.swift in Sources */,

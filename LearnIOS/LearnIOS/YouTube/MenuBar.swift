@@ -23,7 +23,7 @@ class MenuBar: UIView ,UICollectionViewDataSource,UICollectionViewDelegate,UICol
     }()
  
     let menuCellReuseIdentifier = "MenuCellId"
-    let images = [ R.image.globe_icon.name,R.image.messenger_icon.name,R.image.requests_icon.name,R.image.more_icon.name]
+    let images = [ R.image.home.name,R.image.trending.name,R.image.subscriptions.name,R.image.account.name]
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.collectionView.register(MenuCell.self, forCellWithReuseIdentifier: menuCellReuseIdentifier)

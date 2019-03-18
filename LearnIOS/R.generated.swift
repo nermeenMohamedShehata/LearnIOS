@@ -16,8 +16,10 @@ struct R: Rswift.Validatable {
     try intern.validate()
   }
   
-  /// This `R.image` struct is generated, and contains static references to 15 images.
+  /// This `R.image` struct is generated, and contains static references to 25 images.
   struct image {
+    /// Image `account`.
+    static let account = Rswift.ImageResource(bundle: R.hostingBundle, name: "account")
     /// Image `comment`.
     static let comment = Rswift.ImageResource(bundle: R.hostingBundle, name: "comment")
     /// Image `gandhi_profile`.
@@ -28,26 +30,49 @@ struct R: Rswift.Validatable {
     static let globe_icon = Rswift.ImageResource(bundle: R.hostingBundle, name: "globe_icon")
     /// Image `globe_small`.
     static let globe_small = Rswift.ImageResource(bundle: R.hostingBundle, name: "globe_small")
+    /// Image `home`.
+    static let home = Rswift.ImageResource(bundle: R.hostingBundle, name: "home")
+    /// Image `kanye_profile`.
+    static let kanye_profile = Rswift.ImageResource(bundle: R.hostingBundle, name: "kanye_profile")
     /// Image `like`.
     static let like = Rswift.ImageResource(bundle: R.hostingBundle, name: "like")
     /// Image `messenger_icon`.
     static let messenger_icon = Rswift.ImageResource(bundle: R.hostingBundle, name: "messenger_icon")
     /// Image `more_icon`.
     static let more_icon = Rswift.ImageResource(bundle: R.hostingBundle, name: "more_icon")
+    /// Image `nav_more_icon`.
+    static let nav_more_icon = Rswift.ImageResource(bundle: R.hostingBundle, name: "nav_more_icon")
     /// Image `news_feed_icon`.
     static let news_feed_icon = Rswift.ImageResource(bundle: R.hostingBundle, name: "news_feed_icon")
     /// Image `requests_icon`.
     static let requests_icon = Rswift.ImageResource(bundle: R.hostingBundle, name: "requests_icon")
+    /// Image `search_icon`.
+    static let search_icon = Rswift.ImageResource(bundle: R.hostingBundle, name: "search_icon")
     /// Image `share`.
     static let share = Rswift.ImageResource(bundle: R.hostingBundle, name: "share")
     /// Image `steve_profile`.
     static let steve_profile = Rswift.ImageResource(bundle: R.hostingBundle, name: "steve_profile")
     /// Image `steve_status`.
     static let steve_status = Rswift.ImageResource(bundle: R.hostingBundle, name: "steve_status")
+    /// Image `subscriptions`.
+    static let subscriptions = Rswift.ImageResource(bundle: R.hostingBundle, name: "subscriptions")
+    /// Image `taylor_swift_bad_blood`.
+    static let taylor_swift_bad_blood = Rswift.ImageResource(bundle: R.hostingBundle, name: "taylor_swift_bad_blood")
+    /// Image `taylor_swift_blank_space`.
+    static let taylor_swift_blank_space = Rswift.ImageResource(bundle: R.hostingBundle, name: "taylor_swift_blank_space")
+    /// Image `taylor_swift_profile`.
+    static let taylor_swift_profile = Rswift.ImageResource(bundle: R.hostingBundle, name: "taylor_swift_profile")
+    /// Image `trending`.
+    static let trending = Rswift.ImageResource(bundle: R.hostingBundle, name: "trending")
     /// Image `zuckdog`.
     static let zuckdog = Rswift.ImageResource(bundle: R.hostingBundle, name: "zuckdog")
     /// Image `zuckprofile`.
     static let zuckprofile = Rswift.ImageResource(bundle: R.hostingBundle, name: "zuckprofile")
+    
+    /// `UIImage(named: "account", bundle: ..., traitCollection: ...)`
+    static func account(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.account, compatibleWith: traitCollection)
+    }
     
     /// `UIImage(named: "comment", bundle: ..., traitCollection: ...)`
     static func comment(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
@@ -74,6 +99,16 @@ struct R: Rswift.Validatable {
       return UIKit.UIImage(resource: R.image.globe_small, compatibleWith: traitCollection)
     }
     
+    /// `UIImage(named: "home", bundle: ..., traitCollection: ...)`
+    static func home(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.home, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "kanye_profile", bundle: ..., traitCollection: ...)`
+    static func kanye_profile(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.kanye_profile, compatibleWith: traitCollection)
+    }
+    
     /// `UIImage(named: "like", bundle: ..., traitCollection: ...)`
     static func like(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.like, compatibleWith: traitCollection)
@@ -89,6 +124,11 @@ struct R: Rswift.Validatable {
       return UIKit.UIImage(resource: R.image.more_icon, compatibleWith: traitCollection)
     }
     
+    /// `UIImage(named: "nav_more_icon", bundle: ..., traitCollection: ...)`
+    static func nav_more_icon(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.nav_more_icon, compatibleWith: traitCollection)
+    }
+    
     /// `UIImage(named: "news_feed_icon", bundle: ..., traitCollection: ...)`
     static func news_feed_icon(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.news_feed_icon, compatibleWith: traitCollection)
@@ -97,6 +137,11 @@ struct R: Rswift.Validatable {
     /// `UIImage(named: "requests_icon", bundle: ..., traitCollection: ...)`
     static func requests_icon(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.requests_icon, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "search_icon", bundle: ..., traitCollection: ...)`
+    static func search_icon(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.search_icon, compatibleWith: traitCollection)
     }
     
     /// `UIImage(named: "share", bundle: ..., traitCollection: ...)`
@@ -112,6 +157,31 @@ struct R: Rswift.Validatable {
     /// `UIImage(named: "steve_status", bundle: ..., traitCollection: ...)`
     static func steve_status(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.steve_status, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "subscriptions", bundle: ..., traitCollection: ...)`
+    static func subscriptions(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.subscriptions, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "taylor_swift_bad_blood", bundle: ..., traitCollection: ...)`
+    static func taylor_swift_bad_blood(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.taylor_swift_bad_blood, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "taylor_swift_blank_space", bundle: ..., traitCollection: ...)`
+    static func taylor_swift_blank_space(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.taylor_swift_blank_space, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "taylor_swift_profile", bundle: ..., traitCollection: ...)`
+    static func taylor_swift_profile(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.taylor_swift_profile, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "trending", bundle: ..., traitCollection: ...)`
+    static func trending(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.trending, compatibleWith: traitCollection)
     }
     
     /// `UIImage(named: "zuckdog", bundle: ..., traitCollection: ...)`

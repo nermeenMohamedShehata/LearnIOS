@@ -14,7 +14,7 @@ class VideoCell: UICollectionViewCell {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.backgroundColor = .blue
-        imageView.image = R.image.gandhi_status()
+        imageView.image = R.image.taylor_swift_blank_space()
         imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true
         return imageView
@@ -24,7 +24,7 @@ class VideoCell: UICollectionViewCell {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.backgroundColor = .green
-        imageView.image = R.image.zuckprofile()
+        imageView.image = R.image.taylor_swift_profile()
         imageView.contentMode = .scaleAspectFit
         imageView.clipsToBounds = true
         imageView.layer.cornerRadius = 22
@@ -55,6 +55,29 @@ class VideoCell: UICollectionViewCell {
         view.backgroundColor = UIColor.rgb(red: 230, green: 230, blue: 230)
         return view
     }()
+    var titleLabelHeightConstraints : NSLayoutConstraint?
+    var video : Video? {
+        didSet{
+           
+                if let thumbnailName = video?.thumbnailImageName {
+                    self.thumbnailImageView.image = UIImage(named: thumbnailName)
+                }
+                if let titleName = video?.title {
+                    self.titleLabel.text = titleName
+                }
+            if let profileImageName = video?.channcel?.profileImageName {
+                self.userProfileImageView.image = UIImage(named: profileImageName)
+            }
+            if let channelName = video?.channcel?.name , let numofViews = video?.numberOfViews {
+                let numberFormatter = NumberFormatter()
+                numberFormatter.numberStyle = .decimal
+                self.subTitleTextView.text = "\(channelName) - \(numberFormatter.string(from: numofViews)!) * 2 years ago"
+            }
+            
+       
+           
+        }
+    }
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupLayouUI()
@@ -82,7 +105,8 @@ class VideoCell: UICollectionViewCell {
         NSLayoutConstraint.activate([
             thumbnailImageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
             thumbnailImageView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
-            thumbnailImageView.topAnchor.constraint(equalTo: topAnchor, constant: 16)
+            thumbnailImageView.topAnchor.constraint(equalTo: topAnchor, constant: 16),
+            thumbnailImageView.heightAnchor.constraint(equalToConstant: 200)
             ])
     }
     private func setupUserProfileImageView(){
@@ -103,7 +127,9 @@ class VideoCell: UICollectionViewCell {
                 .trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
             titleLabel.topAnchor.constraint(equalTo: thumbnailImageView.bottomAnchor, constant: 8),
            titleLabel.heightAnchor.constraint(greaterThanOrEqualToConstant: 0)
+            
             ])
+        titleLabelHeightConstraints = titleLabel.heightAnchor.constraint(greaterThanOrEqualToConstant: 0)
     }
     private func setupSubTitleTextView(){
         NSLayoutConstraint.activate([
@@ -120,9 +146,9 @@ class VideoCell: UICollectionViewCell {
             seperatorView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 0),
             seperatorView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: 0),
             seperatorView.heightAnchor.constraint(equalToConstant: 1),
+            seperatorView.topAnchor.constraint(equalTo: subTitleTextView.bottomAnchor, constant: 8),
             seperatorView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: 0),
-            seperatorView.topAnchor.constraint(equalTo: userProfileImageView.bottomAnchor, constant: 8),
+
             ])
     }
-  
 }
