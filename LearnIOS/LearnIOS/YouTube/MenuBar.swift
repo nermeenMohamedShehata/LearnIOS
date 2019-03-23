@@ -10,6 +10,7 @@ import UIKit
 
 class MenuBar: UIView ,UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout{
 
+    var horizontalBarLeftAnchorConstraint : NSLayoutConstraint?
     lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
@@ -17,6 +18,12 @@ class MenuBar: UIView ,UICollectionViewDataSource,UICollectionViewDelegate,UICol
         cv.dataSource = self
         cv.delegate = self
         return cv
+    }()
+    lazy var horizontalBarView : UIView = {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.backgroundColor = UIColor(white: 0.95, alpha: 1)
+        return view
     }()
 
     let menuCellReuseIdentifier = "MenuCellId"
@@ -31,17 +38,20 @@ class MenuBar: UIView ,UICollectionViewDataSource,UICollectionViewDelegate,UICol
 
         let selectedIndexPath = IndexPath(item: 0, section: 0)
         collectionView.selectItem(at: selectedIndexPath, animated: false, scrollPosition: .bottom)
-    }
+     }
 
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     func setupViews(){
         addSubview(collectionView)
+        addSubview(horizontalBarView)
+
     }
     func setupLayoutUI(){
         setupViews()
         setupCollectionViewConstraints()
+        setupHorizontalBarViewConstraints()
     }
     func setupCollectionViewConstraints(){
                 addConstraintsWithFormat("H:|[v0]|", views: collectionView)
@@ -55,6 +65,29 @@ class MenuBar: UIView ,UICollectionViewDataSource,UICollectionViewDelegate,UICol
             collectionView.bottomAnchor.constraint(equalTo:(self.superview?.bottomAnchor)!),
             ])
         */
+    }
+    func setupHorizontalBarViewConstraints(){
+        NSLayoutConstraint.activate([
+//            horizontalBarView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 0),
+            horizontalBarView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: 0),
+            horizontalBarView.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 1/4),
+            horizontalBarView.heightAnchor.constraint(equalToConstant: 8),
+            ])
+        horizontalBarLeftAnchorConstraint = horizontalBarView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 0)
+        horizontalBarLeftAnchorConstraint?.isActive = true
+        
+        
+    }
+ 
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let x = CGFloat(indexPath.item) * frame.width  / 4
+        horizontalBarLeftAnchorConstraint?.constant = x
+         
+        UIView.animate(withDuration: 0.75, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
+            self.layoutIfNeeded()
+
+        }, completion: nil)
+        
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 4

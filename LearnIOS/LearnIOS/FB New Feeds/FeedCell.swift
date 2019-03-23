@@ -68,7 +68,7 @@ class FeedCell: UICollectionViewCell {
     var post : Post? {
         didSet{
             if let name = post?.name {
-                var attributedText  = NSMutableAttributedString(string: name, attributes: [NSAttributedString.Key.font:UIFont.boldSystemFont(ofSize: 14)])
+                let attributedText  = NSMutableAttributedString(string: name, attributes: [NSAttributedString.Key.font:UIFont.boldSystemFont(ofSize: 14)])
                 attributedText.append(NSAttributedString(string: "\nSeptemper - San Fransico * ", attributes: [NSAttributedString.Key.font:UIFont.systemFont(ofSize: 12),NSAttributedString.Key.foregroundColor:UIColor.rgb(red: 155, green: 161, blue: 171)]))
                 
                 // for space between 2 line
