@@ -20,7 +20,8 @@ class MenuBar: UIView ,UICollectionViewDataSource,UICollectionViewDelegate,UICol
     }()
 
     let menuCellReuseIdentifier = "MenuCellId"
-    let images = [ R.image.home.name,R.image.trending.name,R.image.subscriptions.name,R.image.account.name]
+ 
+    let images = [ R.image.home.name,R.image.trending.name,R.image.subscriptions.name,R.image.switch_account.name]
 
     override init(frame: CGRect) {
         super.init(frame: frame)

@@ -14,7 +14,7 @@ class HomeController: UICollectionViewController ,UICollectionViewDelegateFlowLa
 
     
     var videos : [Video]?
- 
+
     var collectionViewHeight : NSLayoutConstraint?
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -132,12 +132,23 @@ class HomeController: UICollectionViewController ,UICollectionViewDelegateFlowLa
         self.navigationItem.rightBarButtonItems = [searchButton,moreButton]
 
     }
+    func showControllerForSetting(setting: Setting) {
+        let dummySettingsViewController = UIViewController()
+        dummySettingsViewController.view.backgroundColor = UIColor.white
+        dummySettingsViewController.navigationItem.title = setting.name
+        navigationController?.navigationBar.tintColor = UIColor.white
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        navigationController?.pushViewController(dummySettingsViewController, animated: true)
+    }
    @objc func didTapSearch(){
         print("123")
     }
     let blackView = UIView()
-    let settingsLauncher = SettingsLauncher()
-    
+    lazy var settingsLauncher: SettingsLauncher = {
+        let launcher = SettingsLauncher()
+        launcher.homeController = self
+        return launcher
+    }()
     @objc func didTapMore(){
         settingsLauncher.showsettings()
     }
