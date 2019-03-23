@@ -21,6 +21,7 @@ class MenuBar: UIView ,UICollectionViewDataSource,UICollectionViewDelegate,UICol
             cv.delegate = self
         return cv
     }()
+    
  
     let menuCellReuseIdentifier = "MenuCellId"
     let images = [ R.image.home.name,R.image.trending.name,R.image.subscriptions.name,R.image.account.name]

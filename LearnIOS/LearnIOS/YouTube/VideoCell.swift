@@ -9,23 +9,66 @@
 import UIKit
 
 class VideoCell: UICollectionViewCell {
+    var video: Video? {
+        didSet {
+            titleLabel.text = video?.title
+            
+            setupThumbnailImage()
+            
+            setupProfileImage()
+            
+            if let channelName = video?.channel?.name, let numberOfViews = video?.numberOfViews {
+                
+                let numberFormatter = NumberFormatter()
+                numberFormatter.numberStyle = .decimal
+                
+                let subtitleText = "\(channelName) • \(numberFormatter.string(from: numberOfViews)!) • 2 years ago "
+                subTitleTextView.text = subtitleText
+            }
+            
+            //measure title text
+            if let title = video?.title {
+                let size = CGSize(width: frame.width - 16 - 44 - 8 - 16, height: 1000)
+                let options = NSStringDrawingOptions.usesFontLeading.union(.usesLineFragmentOrigin)
+                let estimatedRect = NSString(string: title).boundingRect(with: size, options: options, attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 14)], context: nil)
+                
+                if estimatedRect.size.height > 20 {
+                    titleLabelHeightConstraint?.constant = 44
+                } else {
+                    titleLabelHeightConstraint?.constant = 20
+                }
+            }
+            
+            
+        }
+    }
     
-    lazy private var thumbnailImageView : UIImageView = {
-        let imageView = UIImageView()
+    func setupProfileImage() {
+        if let profileImageUrl = video?.channel?.profileImageName {
+            userProfileImageView.loadImageUsingUrlString(urlString: profileImageUrl)
+        }
+    }
+    
+    func setupThumbnailImage() {
+        if let thumbnailImageUrl = video?.thumbnailImageName {
+            thumbnailImageView.loadImageUsingUrlString(urlString: thumbnailImageUrl)
+        }
+    }
+    lazy private var thumbnailImageView : CustomImageView = {
+        let imageView = CustomImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.backgroundColor = .blue
-        imageView.image = R.image.taylor_swift_blank_space()
+         imageView.image = R.image.taylor_swift_blank_space()
         imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true
+ 
         return imageView
     }()
     
-    lazy private var userProfileImageView : UIImageView = {
-        let imageView = UIImageView()
+    lazy private var userProfileImageView : CustomImageView = {
+        let imageView = CustomImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.backgroundColor = .green
         imageView.image = R.image.taylor_swift_profile()
-        imageView.contentMode = .scaleAspectFit
+        imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true
         imageView.layer.cornerRadius = 22
         imageView.layer.masksToBounds = true
@@ -55,29 +98,8 @@ class VideoCell: UICollectionViewCell {
         view.backgroundColor = UIColor.rgb(red: 230, green: 230, blue: 230)
         return view
     }()
-    var titleLabelHeightConstraints : NSLayoutConstraint?
-    var video : Video? {
-        didSet{
-           
-                if let thumbnailName = video?.thumbnailImageName {
-                    self.thumbnailImageView.image = UIImage(named: thumbnailName)
-                }
-                if let titleName = video?.title {
-                    self.titleLabel.text = titleName
-                }
-            if let profileImageName = video?.channcel?.profileImageName {
-                self.userProfileImageView.image = UIImage(named: profileImageName)
-            }
-            if let channelName = video?.channcel?.name , let numofViews = video?.numberOfViews {
-                let numberFormatter = NumberFormatter()
-                numberFormatter.numberStyle = .decimal
-                self.subTitleTextView.text = "\(channelName) - \(numberFormatter.string(from: numofViews)!) * 2 years ago"
-            }
-            
-       
-           
-        }
-    }
+    var titleLabelHeightConstraint : NSLayoutConstraint?
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupLayouUI()
@@ -129,7 +151,7 @@ class VideoCell: UICollectionViewCell {
            titleLabel.heightAnchor.constraint(greaterThanOrEqualToConstant: 0)
             
             ])
-        titleLabelHeightConstraints = titleLabel.heightAnchor.constraint(greaterThanOrEqualToConstant: 0)
+        titleLabelHeightConstraint = titleLabel.heightAnchor.constraint(greaterThanOrEqualToConstant: 0)
     }
     private func setupSubTitleTextView(){
         NSLayoutConstraint.activate([

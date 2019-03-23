@@ -23,3 +23,40 @@ extension UIView {
         addConstraints(NSLayoutConstraint.constraints(withVisualFormat: format, options: NSLayoutConstraint.FormatOptions(), metrics: nil, views: viewsDictionary))
     }
 }
+extension UILabel{
+    func textAutoHeight(text: String) -> Int{
+        
+        self.frame = CGRect(x : self.frame.origin.x,y :self.frame.origin.y,width : self.frame.width ,height : self.heightForView(lbl : self,text: text, width: self.frame.width))
+        return  Int(self.frame.height)//
+    }
+    
+    func heightForView(lbl : UILabel ,text:String, width:CGFloat) -> CGFloat{
+        let label:UILabel = UILabel(frame: CGRect(x: lbl.frame.origin.x, y: lbl.frame.origin.y, width: lbl.frame.width, height: CGFloat.greatestFiniteMagnitude))
+        label.numberOfLines = 0
+        label.adjustsFontSizeToFitWidth = true
+        label.lineBreakMode = NSLineBreakMode.byWordWrapping
+        //label.font = font
+        label.text = text
+        label.sizeToFit()
+        return label.frame.height
+    }
+}
+//extension UIImageView {
+//    
+//    func loadImageUsingUrlString(urlString: String) {
+//        let url = URL(string: urlString)!
+//        URLSession.shared.dataTask(with: url, completionHandler: { (data, respones, error) in
+//            
+//            if error != nil {
+//                print(error ?? "")
+//                return
+//            }
+//            
+//            DispatchQueue.main.async {
+//                self.image = UIImage(data: data!)
+//            }
+//            
+//        }).resume()
+//    }
+//    
+//}

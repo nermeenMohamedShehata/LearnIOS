@@ -12,41 +12,66 @@ private let reuseIdentifier = "Cell"
 
 class HomeController: UICollectionViewController ,UICollectionViewDelegateFlowLayout{
 
-    var videos : [Video] = {
-        var kaneyChanncel = Channel()
-        kaneyChanncel.name = "KenyIsTheBestChanncel"
-        kaneyChanncel.profileImageName = R.image.kanye_profile.name
-        let blankVideo = Video()
-        blankVideo.title = "Taylor Swift - Blank Space"
-        blankVideo.thumbnailImageName = R.image.taylor_swift_blank_space.name
-        blankVideo.channcel = kaneyChanncel
-        blankVideo.numberOfViews = 2342453245
-        let badVideo = Video()
-        badVideo.title = "Taylor Swift - Bad Blood Featuring Keniginj Form Style"
-        badVideo.thumbnailImageName = R.image.taylor_swift_bad_blood.name
-        badVideo.channcel = kaneyChanncel
-        badVideo.numberOfViews = 789687332
-        
-        let binkyVideo = Video()
-        binkyVideo.title = "Taylor Swift - Bad Blood Featuring Keniginj Form Style Taylor Swift - Bad Blood Featuring Keniginj Form Style Taylor Swift - Bad Blood Featuring Keniginj Form Style"
-        binkyVideo.thumbnailImageName = R.image.taylor_swift_bad_blood.name
-        binkyVideo.channcel = kaneyChanncel
-        binkyVideo.numberOfViews = 789687332
-        
-        return [blankVideo,badVideo,binkyVideo]
-    }()
+    
+    var videos : [Video]?
+ 
     var collectionViewHeight : NSLayoutConstraint?
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupObservers()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
        
         // Do any additional setup after loading the view.
+        fetchVideos()
         setupViews()
 
-
     }
+    
+    func fetchVideos() {
+        guard let url = URL(string: "https://s3-us-west-2.amazonaws.com/youtubeassets/home.json") else { return }
+        URLSession.shared.dataTask(with: url) { (data, response, error) in
+            
+            if error != nil {
+                print(error ?? "")
+                return
+            }
+            
+            do {
+                let json = try JSONSerialization.jsonObject(with: data!, options: .mutableContainers)
+                
+                self.videos = [Video]()
+                
+                for dictionary in json as! [[String: AnyObject]] {
+                    
+                    let video = Video()
+                    video.title = dictionary["title"] as? String
+                    video.thumbnailImageName = dictionary["thumbnail_image_name"] as? String
+                    
+                    let channelDictionary = dictionary["channel"] as! [String: AnyObject]
+                    
+                    let channel = Channel()
+                    channel.name = channelDictionary["name"] as? String
+                    channel.profileImageName = channelDictionary["profile_image_name"] as? String
+                    
+                    video.channel = channel
+                    
+                    self.videos?.append(video)
+                }
+                
+                DispatchQueue.main.async {
+                    self.collectionView?.reloadData()
+                }
+                
+                
+            } catch let jsonError {
+                print(jsonError)
+            }
+            
+            
+            
+            }.resume()
+    }
+
     func setupViews(){
        
         // Add `coolectionView` to display hierarchy and setup its appearance
@@ -60,9 +85,7 @@ class HomeController: UICollectionViewController ,UICollectionViewDelegateFlowLa
         collectionView.scrollIndicatorInsets = UIEdgeInsets(top: 50, left: 0, bottom: 0, right: 0)
         // Register cell classes
         self.collectionView!.register(VideoCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-//
-//        (collectionView.collectionViewLayout as! UICollectionViewFlowLayout).estimatedItemSize = UICollectionViewFlowLayout.automaticSize
-//        (collectionView.collectionViewLayout as! UICollectionViewFlowLayout).sectionInsetReference = .fromLayoutMargins
+
         
         collectionViewHeight = collectionView.heightAnchor.constraint(greaterThanOrEqualToConstant: 0)
  
@@ -119,64 +142,44 @@ class HomeController: UICollectionViewController ,UICollectionViewDelegateFlowLa
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return self.videos.count
+        return self.videos?.count ?? 0
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! VideoCell
-       cell.video = videos[indexPath.row]
-    
+        cell.video = videos?[indexPath.row]
+        
          // Configure the cell
     
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        let heightFOrTitleLabel = estimateLabelHeight(index: indexPath.row)
         let height = (view.frame.width - 16 - 16 ) * 9 / 16
-        return CGSize(width: self.view.frame.width, height: height + 16 + 68)
+        return CGSize(width: self.view.frame.width, height: height + 16 + 8  + heightFOrTitleLabel + 8 + 1 + 8 + 44)
+    }
+    func estimateLabelHeight(index:Int) -> CGFloat{
+        if let title = videos?[index].title {
+            let size = CGSize(width: self.view.frame.width - 16 - 44 - 8 - 16, height: 1000)
+            let options = NSStringDrawingOptions.usesFontLeading.union(.usesLineFragmentOrigin)
+            let estimatedRect = NSString(string: title).boundingRect(with: size, options: options, attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 14)], context: nil)
+            
+            if estimatedRect.size.height > 20 {
+        return estimatedRect.size.height
+        
+            } else {
+               // titleLabelHeightConstraint?.constant = 20
+        return estimatedRect.size.height
+            }
+        }
+        return 0.0
     }
     
-    // MARK: - UICollectionViewDelegateFlowLayout -
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//        let sectionInset = (collectionViewLayout as! UICollectionViewFlowLayout).sectionInset
-//        let referenceHeight: CGFloat = 100 // Approximate height of your cell
-//        let referenceWidth = collectionView.safeAreaLayoutGuide.layoutFrame.width
-//            - sectionInset.left
-//            - sectionInset.right
-//            - collectionView.contentInset.left
-//            - collectionView.contentInset.right
-//        return CGSize(width: referenceWidth, height: referenceHeight)
-//    }
+
     
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 0
     }
-   
-        deinit {
-            if let _ = collectionView{
-                collectionView.removeObserver(self, forKeyPath: "contentSize")
-            }
-        }
- 
 }
-// MARK:- Content Adjustment
-extension HomeController {
-    func setupObservers()  {
-        collectionView.addObserver(self, forKeyPath: "contentSize", options: .new, context: nil)
-    }
-
-    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
-
-
-        if let obj = object as? UICollectionView {
-            if obj == self.collectionView && keyPath == "contentSize" {
-                if let newSize = change?[NSKeyValueChangeKey.newKey] as? CGSize {
-                    collectionViewHeight?.constant = newSize.height
-                   self.view.layoutIfNeeded()
-                }
-            }
-        }
-    }
-
-}
-
