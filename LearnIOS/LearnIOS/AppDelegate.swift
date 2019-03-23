@@ -7,13 +7,17 @@
 //
 
 import UIKit
-
+class CustomNavigationController: UINavigationController {
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+}
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
+    var shardApplication : UIApplication?
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         window = UIWindow(frame: UIScreen.main.bounds)
@@ -26,8 +30,33 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
        // openFBNewFeedsVC()
         //        openCustomTabBar()
-                openYouTubeHome()
+        shardApplication = application
+       // openYouTubeHome()
+       // openYoutubeHome2()
 
+        UINavigationBar.appearance().shadowImage = UIImage()
+        UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
+
+
+        let flowLayout = UICollectionViewFlowLayout()
+        let vc = HomeController(collectionViewLayout: flowLayout)
+        let navController = CustomNavigationController(rootViewController: vc)
+
+        window?.rootViewController = navController
+
+        UINavigationBar.appearance().barTintColor =
+            UIColor.rgb(red: 230, green: 32, blue: 31)
+
+        //        application.statusBarStyle = .lightContent
+
+        let statusBarBackgroundView = UIView()
+        statusBarBackgroundView.backgroundColor = UIColor.rgb(red: 194, green: 31, blue: 31)
+
+        window?.addSubview(statusBarBackgroundView)
+        window?.addConstraintsWithFormat("H:|[v0]|", views: statusBarBackgroundView)
+
+        let height = application.statusBarFrame.height
+        window?.addConstraintsWithFormat("V:|[v0(\(height))]", views: statusBarBackgroundView)
         return true
     }
     func openCaurslPage(){
@@ -91,7 +120,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             ])
         window?.addConstraintsWithFormat("V:|[v0(20)]",views:statusBarBackgroundView)
         
+        let height = shardApplication?.statusBarFrame.height ?? 0
+                window?.addConstraintsWithFormat("V:|[v0(\(height))]", views: statusBarBackgroundView)
+        
     }
+ 
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.

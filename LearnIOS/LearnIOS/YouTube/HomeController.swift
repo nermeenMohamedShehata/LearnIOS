@@ -78,7 +78,11 @@ class HomeController: UICollectionViewController ,UICollectionViewDelegateFlowLa
         let flowLayout = UICollectionViewFlowLayout()
         collectionView = UICollectionView(frame: self.view.frame, collectionViewLayout: flowLayout)
         collectionView.alwaysBounceVertical = true
-        collectionView.contentInsetAdjustmentBehavior = .always
+        if #available(iOS 11.0, *) {
+            collectionView.contentInsetAdjustmentBehavior = .always
+        } else {
+            // Fallback on earlier versions
+        }
         collectionView.showsHorizontalScrollIndicator = false
         collectionView.backgroundColor = .white
         collectionView.contentInset = UIEdgeInsets(top: 50, left: 0, bottom: 0, right: 0)
@@ -107,7 +111,7 @@ class HomeController: UICollectionViewController ,UICollectionViewDelegateFlowLa
         menuBar.topAnchor.constraint(equalTo: view.topAnchor, constant: 0).isActive = true
         menuBar.rightAnchor.constraint(equalTo: view.rightAnchor, constant: 0).isActive = true
 
-        
+        setupMenuBar()
         
  
         setupNavBarButtons()
@@ -116,6 +120,11 @@ class HomeController: UICollectionViewController ,UICollectionViewDelegateFlowLa
         let menu = MenuBar()
         return menu
     }()
+    private func setupMenuBar() {
+        view.addSubview(menuBar)
+        view.addConstraintsWithFormat("H:|[v0]|", views: menuBar)
+        view.addConstraintsWithFormat("V:|[v0(50)]", views: menuBar)
+    }
     func setupNavBarButtons(){
         let searchButton = UIBarButtonItem(image: R.image.search_icon()?.withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: #selector(didTapSearch))
         let moreButton = UIBarButtonItem(image: R.image.nav_more_icon()?.withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: #selector(didTapMore))
