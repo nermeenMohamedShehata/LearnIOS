@@ -10,7 +10,7 @@ import UIKit
 
 private let reuseIdentifier = "Cell"
 
-class HomeController: UICollectionViewController ,UICollectionViewDelegateFlowLayout{
+class HomeController: UICollectionViewController ,UICollectionViewDelegateFlowLayout,UIGestureRecognizerDelegate{
 
     
     var videos : [Video]?
@@ -135,11 +135,12 @@ class HomeController: UICollectionViewController ,UICollectionViewDelegateFlowLa
    @objc func didTapSearch(){
         print("123")
     }
-    @objc func didTapMore(){
-        print("123")
-    }
+    let blackView = UIView()
+    let settingsLauncher = SettingsLauncher()
     
- 
+    @objc func didTapMore(){
+        settingsLauncher.showsettings()
+    }
 
     // MARK: UICollectionViewDataSource
 

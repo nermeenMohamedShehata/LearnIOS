@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8A0C68552246891C005C5B57 /* SettingsLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0C68542246891C005C5B57 /* SettingsLauncher.swift */; };
 		8A26E2B52234379700E97351 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A26E2B42234379700E97351 /* AppDelegate.swift */; };
 		8A26E2B72234379700E97351 /* CustomCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A26E2B62234379700E97351 /* CustomCollectionView.swift */; };
 		8A26E2BC2234379A00E97351 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A26E2BB2234379A00E97351 /* Assets.xcassets */; };
@@ -56,6 +57,7 @@
 		09754341102D2CC2A321DE67 /* Pods-LearnIOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearnIOSTests.release.xcconfig"; path = "Target Support Files/Pods-LearnIOSTests/Pods-LearnIOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		6C7F174B19C1095219BF5A4E /* Pods_LearnIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LearnIOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7633C478E532AB77DA33280A /* Pods-LearnIOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearnIOSTests.debug.xcconfig"; path = "Target Support Files/Pods-LearnIOSTests/Pods-LearnIOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		8A0C68542246891C005C5B57 /* SettingsLauncher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsLauncher.swift; sourceTree = "<group>"; };
 		8A26E2B12234379700E97351 /* LearnIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearnIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A26E2B42234379700E97351 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8A26E2B62234379700E97351 /* CustomCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionView.swift; sourceTree = "<group>"; };
@@ -124,6 +126,14 @@
 				A991DC45597A22361D5D871F /* Pods_LearnIOSTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8A0C685322468907005C5B57 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8A0C68542246891C005C5B57 /* SettingsLauncher.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		8A26E2A82234379700E97351 = {
@@ -226,6 +236,7 @@
 		8A7B1D8822400B0800E02FF6 /* YouTube */ = {
 			isa = PBXGroup;
 			children = (
+				8A0C685322468907005C5B57 /* Controller */,
 				8A7B1D8A22400B2200E02FF6 /* HomeController.swift */,
 				8A7B1D8922400B2200E02FF6 /* MenuBar.swift */,
 				8A7B1D8B22400B2200E02FF6 /* MenuCell.swift */,
@@ -489,6 +500,7 @@
 				8A26E2B52234379700E97351 /* AppDelegate.swift in Sources */,
 				8A7B1DB422400C3500E02FF6 /* QuestionHeaderCell.swift in Sources */,
 				8A26E2E622357D7700E97351 /* EntryListVC.swift in Sources */,
+				8A0C68552246891C005C5B57 /* SettingsLauncher.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
