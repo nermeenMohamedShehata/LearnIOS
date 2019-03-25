@@ -24,7 +24,27 @@ class HomeController: UICollectionViewController ,UICollectionViewDelegateFlowLa
         // Do any additional setup after loading the view.
         fetchVideos()
         setupViews()
-
+        let swipLeft = UISwipeGestureRecognizer(target: self, action: #selector(swipAction(_:)))
+        swipLeft.direction = .left
+        self.view.addGestureRecognizer(swipLeft)
+        let swipRight = UISwipeGestureRecognizer(target: self, action: #selector(swipAction(_:)))
+        swipRight.direction = .right
+        self.view.addGestureRecognizer(swipRight)
+    }
+    var selectedCountryIndex = 0
+    var selectedIndexPath = IndexPath(item: 0, section: 0)
+    @objc func swipAction(_ sender: UISwipeGestureRecognizer){
+        if sender.direction == .left{
+            if selectedCountryIndex < 4 - 1{
+                selectedCountryIndex += 1
+            }
+        }else{
+            if selectedCountryIndex > 0{
+                selectedCountryIndex -= 1
+            }
+        }
+        selectedIndexPath = IndexPath(item: selectedCountryIndex, section: 0)
+        self.collectionView.selectItem(at: selectedIndexPath, animated: true, scrollPosition: .centeredVertically)
     }
     
     func fetchVideos() {
