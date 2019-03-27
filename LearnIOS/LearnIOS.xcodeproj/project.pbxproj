@@ -17,6 +17,7 @@
 		8A26E2D82234671E00E97351 /* CaursolVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A26E2D72234671E00E97351 /* CaursolVC.swift */; };
 		8A26E2E422357A6500E97351 /* EntryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A26E2E322357A6500E97351 /* EntryCell.swift */; };
 		8A26E2E622357D7700E97351 /* EntryListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A26E2E522357D7700E97351 /* EntryListVC.swift */; };
+		8A5C05CB224BD9F400D03AC1 /* TinderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5C05CA224BD9F400D03AC1 /* TinderViewController.swift */; };
 		8A7B1D8D22400B2300E02FF6 /* MenuBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7B1D8922400B2200E02FF6 /* MenuBar.swift */; };
 		8A7B1D8E22400B2300E02FF6 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7B1D8A22400B2200E02FF6 /* HomeController.swift */; };
 		8A7B1D8F22400B2300E02FF6 /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7B1D8B22400B2200E02FF6 /* MenuCell.swift */; };
@@ -79,6 +80,7 @@
 		8A26E2D72234671E00E97351 /* CaursolVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaursolVC.swift; sourceTree = "<group>"; };
 		8A26E2E322357A6500E97351 /* EntryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryCell.swift; sourceTree = "<group>"; };
 		8A26E2E522357D7700E97351 /* EntryListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryListVC.swift; sourceTree = "<group>"; };
+		8A5C05CA224BD9F400D03AC1 /* TinderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinderViewController.swift; sourceTree = "<group>"; };
 		8A7B1D8922400B2200E02FF6 /* MenuBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuBar.swift; sourceTree = "<group>"; };
 		8A7B1D8A22400B2200E02FF6 /* HomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		8A7B1D8B22400B2200E02FF6 /* MenuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
@@ -175,6 +177,7 @@
 		8A26E2B32234379700E97351 /* LearnIOS */ = {
 			isa = PBXGroup;
 			children = (
+				8A5C05C7224BD4B600D03AC1 /* Cool Projects */,
 				8AEEB1C92248EAE3005BB0E7 /* Youtube MVP */,
 				8A7B1D8822400B0800E02FF6 /* YouTube */,
 				8A7B1D9422400BD900E02FF6 /* FB New Feeds */,
@@ -248,6 +251,30 @@
 				8A7B1DAC22400C3500E02FF6 /* ResultsVC.swift */,
 			);
 			path = "Questionnaire App";
+			sourceTree = "<group>";
+		};
+		8A5C05C7224BD4B600D03AC1 /* Cool Projects */ = {
+			isa = PBXGroup;
+			children = (
+				8A5C05C9224BD9D600D03AC1 /* Tinder */,
+				8A5C05C8224BD4C800D03AC1 /* FaceBook LiveStream */,
+			);
+			path = "Cool Projects";
+			sourceTree = "<group>";
+		};
+		8A5C05C8224BD4C800D03AC1 /* FaceBook LiveStream */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "FaceBook LiveStream";
+			sourceTree = "<group>";
+		};
+		8A5C05C9224BD9D600D03AC1 /* Tinder */ = {
+			isa = PBXGroup;
+			children = (
+				8A5C05CA224BD9F400D03AC1 /* TinderViewController.swift */,
+			);
+			path = Tinder;
 			sourceTree = "<group>";
 		};
 		8A7B1D8822400B0800E02FF6 /* YouTube */ = {
@@ -684,6 +711,7 @@
 				8A26E2B52234379700E97351 /* AppDelegate.swift in Sources */,
 				8A7B1DB422400C3500E02FF6 /* QuestionHeaderCell.swift in Sources */,
 				8A26E2E622357D7700E97351 /* EntryListVC.swift in Sources */,
+				8A5C05CB224BD9F400D03AC1 /* TinderViewController.swift in Sources */,
 				8A0C68552246891C005C5B57 /* SettingsLauncher.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

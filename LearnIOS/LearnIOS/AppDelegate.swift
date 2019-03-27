@@ -36,7 +36,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         UINavigationBar.appearance().shadowImage = UIImage()
         UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
-
+/* this for youtube app
 
         let flowLayout = UICollectionViewFlowLayout()
         let vc = HomeController(collectionViewLayout: flowLayout)
@@ -57,6 +57,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         let height = application.statusBarFrame.height
         window?.addConstraintsWithFormat("V:|[v0(\(height))]", views: statusBarBackgroundView)
+ */
+        openTinderVC()
+        
         return true
     }
     func openCaurslPage(){
@@ -93,6 +96,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func openCustomTabBar(){
         window?.rootViewController = CustomTabBarController()
         
+    }
+    func openTinderVC(){
+        window?.rootViewController = TinderViewController()
     }
     /*
      YouTube App
