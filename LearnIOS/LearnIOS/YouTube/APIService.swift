@@ -10,11 +10,24 @@ import UIKit
 
 class ApiService: NSObject {
     
-    static let sharedInstance = ApiService()
+    static let shared = ApiService()
+    let baseUrl = "https://s3-us-west-2.amazonaws.com/youtubeassets"
     
-    func fetchVideos(completion:@escaping ([Video]) -> ()) {
-        guard let url = URL(string: "https://s3-us-west-2.amazonaws.com/youtubeassets/home.json") else { return }
-        URLSession.shared.dataTask(with: url) { (data, response, error) in
+    func fetchVideos(completion: @escaping ([Video]) -> ()) {
+        fetchFeedForUrlString(urlString: "\(baseUrl)/home.json", completion: completion)
+    }
+    
+    func fetchTrendingFeed(completion: @escaping ([Video]) -> ()) {
+        fetchFeedForUrlString(urlString: "\(baseUrl)/trending.json", completion: completion)
+    }
+    
+    func fetchSubscriptionFeed(completion: @escaping ([Video]) -> ()) {
+        fetchFeedForUrlString(urlString: "\(baseUrl)/subscriptions.json", completion: completion)
+    }
+    
+    func fetchFeedForUrlString(urlString: String, completion: @escaping ([Video]) -> ()) {
+        let url = URL(string: urlString)
+        URLSession.shared.dataTask(with: url!) { (data, response, error) in
             
             if error != nil {
                 print(error ?? "")
@@ -24,7 +37,7 @@ class ApiService: NSObject {
             do {
                 let json = try JSONSerialization.jsonObject(with: data!, options: .mutableContainers)
                 
-                 var videos = [Video]()
+                var videos = [Video]()
                 
                 for dictionary in json as! [[String: AnyObject]] {
                     
@@ -46,12 +59,15 @@ class ApiService: NSObject {
                 DispatchQueue.main.async {
                     completion(videos)
                 }
+                
             } catch let jsonError {
                 print(jsonError)
             }
             
             
+            
             }.resume()
     }
     
+     
 }

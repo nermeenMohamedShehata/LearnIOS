@@ -8,9 +8,10 @@
 
 import UIKit
 
+
 class MenuCell: UICollectionViewCell {
 
-    let imageView : UIImageView = {
+    private lazy var imageView : UIImageView = {
         let iv = UIImageView()
         iv.image = UIImage(named: "home")?.withRenderingMode(.alwaysTemplate)
         iv.translatesAutoresizingMaskIntoConstraints = false
@@ -26,6 +27,9 @@ class MenuCell: UICollectionViewCell {
         didSet{
             imageView.tintColor = isSelected ? UIColor.white : UIColor.rgb(red: 91, green: 14, blue: 13)
         }
+    }
+    func setImageView(image : UIImage){
+        self.imageView.image = image.withRenderingMode(.alwaysTemplate)
     }
 
     override init(frame: CGRect) {
@@ -50,6 +54,5 @@ class MenuCell: UICollectionViewCell {
         imageView.centerXAnchor.constraint(equalTo: centerXAnchor),
         imageView.centerYAnchor.constraint(equalTo: centerYAnchor),
         ])
-
     }
 }
