@@ -58,7 +58,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let height = application.statusBarFrame.height
         window?.addConstraintsWithFormat("V:|[v0(\(height))]", views: statusBarBackgroundView)
  */
-        openTinderVC()
+      //  openTinderVC()
+        openDragImageVC()
         
         return true
     }
@@ -99,6 +100,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     func openTinderVC(){
         window?.rootViewController = TinderViewController()
+    }
+    func openDragImageVC(){
+        if #available(iOS 11.0, *) {
+              window?.rootViewController = UINavigationController(rootViewController: DropImageViewController())
+            UINavigationBar.appearance().barTintColor = UIColor(red: 51/255, green: 90/255, blue: 145/255, alpha: 1)
+            UINavigationBar.appearance().tintColor = .white
+            UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.white]
+            
+        } else {
+            // Fallback on earlier versions
+        }
     }
     /*
      YouTube App

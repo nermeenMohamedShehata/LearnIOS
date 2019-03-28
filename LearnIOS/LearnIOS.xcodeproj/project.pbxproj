@@ -39,6 +39,7 @@
 		8A7B1DBE22400CDE00E02FF6 /* Utilits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7B1DBD22400CDE00E02FF6 /* Utilits.swift */; };
 		8A7B1DC122400D9000E02FF6 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7B1DC022400D9000E02FF6 /* R.generated.swift */; };
 		8A7B1DC4224019C700E02FF6 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7B1DC3224019C700E02FF6 /* Video.swift */; };
+		8ABB96F7224D36EF004EB2D6 /* DropImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABB96F6224D36EF004EB2D6 /* DropImageViewController.swift */; };
 		8ADC5D3522412352000C82A6 /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ADC5D3422412352000C82A6 /* CustomImageView.swift */; };
 		8AEEB1C622469405005BB0E7 /* SettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AEEB1C522469405005BB0E7 /* SettingCell.swift */; };
 		8AEEB1C82246BB82005BB0E7 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AEEB1C72246BB82005BB0E7 /* APIService.swift */; };
@@ -103,6 +104,7 @@
 		8A7B1DC022400D9000E02FF6 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		8A7B1DC222400FD700E02FF6 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		8A7B1DC3224019C700E02FF6 /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
+		8ABB96F6224D36EF004EB2D6 /* DropImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropImageViewController.swift; sourceTree = "<group>"; };
 		8ADC5D3422412352000C82A6 /* CustomImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomImageView.swift; sourceTree = "<group>"; };
 		8AEEB1C522469405005BB0E7 /* SettingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingCell.swift; sourceTree = "<group>"; };
 		8AEEB1C72246BB82005BB0E7 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
@@ -256,7 +258,7 @@
 		8A5C05C7224BD4B600D03AC1 /* Cool Projects */ = {
 			isa = PBXGroup;
 			children = (
-				8ABB96F5224D36BF004EB2D6 /* Drop Images */,
+				8ABB96F5224D36BF004EB2D6 /* Drag & Drop Images */,
 				8A5C05C9224BD9D600D03AC1 /* Tinder */,
 				8A5C05C8224BD4C800D03AC1 /* FaceBook LiveStream */,
 			);
@@ -311,11 +313,12 @@
 			path = "FB New Feeds";
 			sourceTree = "<group>";
 		};
-		8ABB96F5224D36BF004EB2D6 /* Drop Images */ = {
+		8ABB96F5224D36BF004EB2D6 /* Drag & Drop Images */ = {
 			isa = PBXGroup;
 			children = (
+				8ABB96F6224D36EF004EB2D6 /* DropImageViewController.swift */,
 			);
-			path = "Drop Images";
+			path = "Drag & Drop Images";
 			sourceTree = "<group>";
 		};
 		8AEEB1C4224693F5005BB0E7 /* Settings */ = {
@@ -720,6 +723,7 @@
 				8A7B1DB422400C3500E02FF6 /* QuestionHeaderCell.swift in Sources */,
 				8A26E2E622357D7700E97351 /* EntryListVC.swift in Sources */,
 				8A5C05CB224BD9F400D03AC1 /* TinderViewController.swift in Sources */,
+				8ABB96F7224D36EF004EB2D6 /* DropImageViewController.swift in Sources */,
 				8A0C68552246891C005C5B57 /* SettingsLauncher.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -881,7 +885,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = LearnIOS/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -901,7 +905,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = LearnIOS/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
