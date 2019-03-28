@@ -59,8 +59,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.addConstraintsWithFormat("V:|[v0(\(height))]", views: statusBarBackgroundView)
  */
       //  openTinderVC()
-        openDragImageVC()
-        
+      //  openDragImageVC()
+//        openFaceDEtectionVC()
+        openAnimatedCircleVC()
         return true
     }
     func openCaurslPage(){
@@ -111,6 +112,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         } else {
             // Fallback on earlier versions
         }
+    }
+    func openFaceDEtectionVC(){
+        
+        window?.rootViewController = FacePageController(collectionViewLayout: UICollectionViewLayout())
+    }
+    func openAnimatedCircleVC(){
+        
+        window?.rootViewController = AnimatedCircleViewController()
     }
     /*
      YouTube App

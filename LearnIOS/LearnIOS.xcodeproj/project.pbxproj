@@ -39,6 +39,11 @@
 		8A7B1DBE22400CDE00E02FF6 /* Utilits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7B1DBD22400CDE00E02FF6 /* Utilits.swift */; };
 		8A7B1DC122400D9000E02FF6 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7B1DC022400D9000E02FF6 /* R.generated.swift */; };
 		8A7B1DC4224019C700E02FF6 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7B1DC3224019C700E02FF6 /* Video.swift */; };
+		8A99A348224D5D1500EA3CB8 /* FaceDetectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A99A347224D5D1500EA3CB8 /* FaceDetectionViewController.swift */; };
+		8A99A34A224D615900EA3CB8 /* FacePageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A99A349224D615900EA3CB8 /* FacePageCell.swift */; };
+		8A99A34C224D61A000EA3CB8 /* FacePageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A99A34B224D61A000EA3CB8 /* FacePageController.swift */; };
+		8A99A34F224D6A5B00EA3CB8 /* AnimatedCircleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A99A34E224D6A5B00EA3CB8 /* AnimatedCircleViewController.swift */; };
+		8A99A353224D7C9E00EA3CB8 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A99A352224D7C9E00EA3CB8 /* Extensions.swift */; };
 		8ABB96F7224D36EF004EB2D6 /* DropImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABB96F6224D36EF004EB2D6 /* DropImageViewController.swift */; };
 		8ADC5D3522412352000C82A6 /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ADC5D3422412352000C82A6 /* CustomImageView.swift */; };
 		8AEEB1C622469405005BB0E7 /* SettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AEEB1C522469405005BB0E7 /* SettingCell.swift */; };
@@ -104,6 +109,11 @@
 		8A7B1DC022400D9000E02FF6 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		8A7B1DC222400FD700E02FF6 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		8A7B1DC3224019C700E02FF6 /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
+		8A99A347224D5D1500EA3CB8 /* FaceDetectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceDetectionViewController.swift; sourceTree = "<group>"; };
+		8A99A349224D615900EA3CB8 /* FacePageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacePageCell.swift; sourceTree = "<group>"; };
+		8A99A34B224D61A000EA3CB8 /* FacePageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacePageController.swift; sourceTree = "<group>"; };
+		8A99A34E224D6A5B00EA3CB8 /* AnimatedCircleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedCircleViewController.swift; sourceTree = "<group>"; };
+		8A99A352224D7C9E00EA3CB8 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		8ABB96F6224D36EF004EB2D6 /* DropImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropImageViewController.swift; sourceTree = "<group>"; };
 		8ADC5D3422412352000C82A6 /* CustomImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomImageView.swift; sourceTree = "<group>"; };
 		8AEEB1C522469405005BB0E7 /* SettingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingCell.swift; sourceTree = "<group>"; };
@@ -258,6 +268,8 @@
 		8A5C05C7224BD4B600D03AC1 /* Cool Projects */ = {
 			isa = PBXGroup;
 			children = (
+				8A99A34D224D6A3A00EA3CB8 /* Animated Circle ProgressBar */,
+				8A99A346224D5D0000EA3CB8 /* Face Detection */,
 				8ABB96F5224D36BF004EB2D6 /* Drag & Drop Images */,
 				8A5C05C9224BD9D600D03AC1 /* Tinder */,
 				8A5C05C8224BD4C800D03AC1 /* FaceBook LiveStream */,
@@ -297,6 +309,7 @@
 			children = (
 				8A7B1DC022400D9000E02FF6 /* R.generated.swift */,
 				8A7B1DBD22400CDE00E02FF6 /* Utilits.swift */,
+				8A99A352224D7C9E00EA3CB8 /* Extensions.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -311,6 +324,24 @@
 				8A7B1D9922400BF100E02FF6 /* Post.swift */,
 			);
 			path = "FB New Feeds";
+			sourceTree = "<group>";
+		};
+		8A99A346224D5D0000EA3CB8 /* Face Detection */ = {
+			isa = PBXGroup;
+			children = (
+				8A99A347224D5D1500EA3CB8 /* FaceDetectionViewController.swift */,
+				8A99A349224D615900EA3CB8 /* FacePageCell.swift */,
+				8A99A34B224D61A000EA3CB8 /* FacePageController.swift */,
+			);
+			path = "Face Detection";
+			sourceTree = "<group>";
+		};
+		8A99A34D224D6A3A00EA3CB8 /* Animated Circle ProgressBar */ = {
+			isa = PBXGroup;
+			children = (
+				8A99A34E224D6A5B00EA3CB8 /* AnimatedCircleViewController.swift */,
+			);
+			path = "Animated Circle ProgressBar";
 			sourceTree = "<group>";
 		};
 		8ABB96F5224D36BF004EB2D6 /* Drag & Drop Images */ = {
@@ -697,14 +728,17 @@
 				8A7B1D8D22400B2300E02FF6 /* MenuBar.swift in Sources */,
 				8AEEB1C622469405005BB0E7 /* SettingCell.swift in Sources */,
 				8A7B1DBC22400C6200E02FF6 /* ToDoListVC.swift in Sources */,
+				8A99A34F224D6A5B00EA3CB8 /* AnimatedCircleViewController.swift in Sources */,
 				8A7B1DB122400C3500E02FF6 /* QuestionController.swift in Sources */,
 				8A7B1D9A22400BF100E02FF6 /* FBSummryLearn.swift in Sources */,
 				8A7B1DB622400C3500E02FF6 /* Question.swift in Sources */,
 				8A26E2B72234379700E97351 /* CustomCollectionView.swift in Sources */,
+				8A99A34A224D615900EA3CB8 /* FacePageCell.swift in Sources */,
 				8A7B1D9B22400BF100E02FF6 /* CustomTabBarController.swift in Sources */,
 				8AEEB1E02248F90F005BB0E7 /* ViewController+Delegate.swift in Sources */,
 				8A26E2E422357A6500E97351 /* EntryCell.swift in Sources */,
 				8AEEB1E8224929E1005BB0E7 /* VideoPlayerView.swift in Sources */,
+				8A99A348224D5D1500EA3CB8 /* FaceDetectionViewController.swift in Sources */,
 				8A7B1DBB22400C6200E02FF6 /* ToDoHeaderCell.swift in Sources */,
 				8A7B1D8E22400B2300E02FF6 /* HomeController.swift in Sources */,
 				8AEEB1E222491AD3005BB0E7 /* CustomFeedCell.swift in Sources */,
@@ -714,6 +748,7 @@
 				8A7B1DB522400C3500E02FF6 /* QuestionLearn.swift in Sources */,
 				8A7B1DBA22400C6200E02FF6 /* ToDoCell.swift in Sources */,
 				8AEEB1DC2248F1A3005BB0E7 /* MenuBar+CollectionView.swift in Sources */,
+				8A99A353224D7C9E00EA3CB8 /* Extensions.swift in Sources */,
 				8A7B1DC122400D9000E02FF6 /* R.generated.swift in Sources */,
 				8A7B1D9C22400BF100E02FF6 /* FeedCell.swift in Sources */,
 				8A7B1D9022400B2300E02FF6 /* VideoCell.swift in Sources */,
@@ -723,6 +758,7 @@
 				8A7B1DB422400C3500E02FF6 /* QuestionHeaderCell.swift in Sources */,
 				8A26E2E622357D7700E97351 /* EntryListVC.swift in Sources */,
 				8A5C05CB224BD9F400D03AC1 /* TinderViewController.swift in Sources */,
+				8A99A34C224D61A000EA3CB8 /* FacePageController.swift in Sources */,
 				8ABB96F7224D36EF004EB2D6 /* DropImageViewController.swift in Sources */,
 				8A0C68552246891C005C5B57 /* SettingsLauncher.swift in Sources */,
 			);
