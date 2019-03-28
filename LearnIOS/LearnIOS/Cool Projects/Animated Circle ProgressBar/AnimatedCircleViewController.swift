@@ -63,45 +63,6 @@ let urlString = "https://firebasestorage.googleapis.com/v0/b/firestorechat-e64ac
         view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTap)))
         
         setupPercentageLabel()
-        
-        /*
-        // Do any additional setup after loading the view.
-        view.backgroundColor = .white
-        
-       
-        //create track layer
-        let trackLayer = CAShapeLayer()
-        let center = view.center
-        let circularPath = UIBezierPath(arcCenter: center, radius: 100, startAngle: -CGFloat.pi / 2, endAngle: 2 * CGFloat.pi, clockwise: true)
-        trackLayer.path = circularPath.cgPath
-        trackLayer.strokeColor = UIColor.lightGray.cgColor
-        trackLayer.lineWidth = 10
-        trackLayer.fillColor = UIColor.clear.cgColor
-        trackLayer.lineCap = .round
-         view.layer.addSublayer(trackLayer)
-        
-        pulsatingLayer = CAShapeLayer()
-        pulsatingLayer.path = circularPath.cgPath
-        pulsatingLayer.strokeColor = UIColor.clear.cgColor
-        pulsatingLayer.lineWidth = 10
-        pulsatingLayer.fillColor = UIColor.yellow.cgColor
-        pulsatingLayer.lineCap = .round
-        view.layer.addSublayer(pulsatingLayer)
-        
-//        let circlePath = UIBezierPath(arcCenter: center, radius: 100, startAngle: -CGFloat.pi / 2, endAngle: 2 * CGFloat.pi, clockwise: true)
-        shapeLayer.path = circularPath.cgPath
-        shapeLayer.strokeColor = UIColor.red.cgColor
-        shapeLayer.lineWidth = 10
-        shapeLayer.fillColor = UIColor.clear.cgColor
-        shapeLayer.lineCap = .round
-        shapeLayer.strokeEnd = 0
-        view.layer.addSublayer(shapeLayer)
-        let tap = UITapGestureRecognizer(target: self, action: #selector(handleTap))
-        view.addGestureRecognizer(tap)
-        view.addSubview(percentageLabel)
-        percentageLabel.frame = CGRect(x: 0, y: 0, width: 100, height: 100)
-        percentageLabel.center = view.center
- */
     }
     private func animatePulsatingLayer() {
         let animation = CABasicAnimation(keyPath: "transform.scale")
