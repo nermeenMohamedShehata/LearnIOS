@@ -61,7 +61,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       //  openTinderVC()
       //  openDragImageVC()
 //        openFaceDEtectionVC()
-        openAnimatedCircleVC()
+//        openAnimatedCircleVC()
+        openAutoTextVC()
         return true
     }
     func openCaurslPage(){
@@ -120,6 +121,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func openAnimatedCircleVC(){
         
         window?.rootViewController = AnimatedCircleViewController()
+    }
+    func openAutoTextVC(){
+        window?.rootViewController = AutoTextViewController()
     }
     /*
      YouTube App

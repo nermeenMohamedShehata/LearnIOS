@@ -17,6 +17,7 @@
 		8A26E2D82234671E00E97351 /* CaursolVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A26E2D72234671E00E97351 /* CaursolVC.swift */; };
 		8A26E2E422357A6500E97351 /* EntryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A26E2E322357A6500E97351 /* EntryCell.swift */; };
 		8A26E2E622357D7700E97351 /* EntryListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A26E2E522357D7700E97351 /* EntryListVC.swift */; };
+		8A2DCA6D224F9D0800CE9871 /* AutoTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A2DCA6C224F9D0800CE9871 /* AutoTextViewController.swift */; };
 		8A5C05CB224BD9F400D03AC1 /* TinderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5C05CA224BD9F400D03AC1 /* TinderViewController.swift */; };
 		8A7B1D8D22400B2300E02FF6 /* MenuBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7B1D8922400B2200E02FF6 /* MenuBar.swift */; };
 		8A7B1D8E22400B2300E02FF6 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7B1D8A22400B2200E02FF6 /* HomeController.swift */; };
@@ -86,6 +87,7 @@
 		8A26E2D72234671E00E97351 /* CaursolVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaursolVC.swift; sourceTree = "<group>"; };
 		8A26E2E322357A6500E97351 /* EntryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryCell.swift; sourceTree = "<group>"; };
 		8A26E2E522357D7700E97351 /* EntryListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryListVC.swift; sourceTree = "<group>"; };
+		8A2DCA6C224F9D0800CE9871 /* AutoTextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoTextViewController.swift; sourceTree = "<group>"; };
 		8A5C05CA224BD9F400D03AC1 /* TinderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinderViewController.swift; sourceTree = "<group>"; };
 		8A7B1D8922400B2200E02FF6 /* MenuBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuBar.swift; sourceTree = "<group>"; };
 		8A7B1D8A22400B2200E02FF6 /* HomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
@@ -189,6 +191,7 @@
 		8A26E2B32234379700E97351 /* LearnIOS */ = {
 			isa = PBXGroup;
 			children = (
+				8A2DCA6E2251444E00CE9871 /* FirBase Demo */,
 				8A5C05C7224BD4B600D03AC1 /* Cool Projects */,
 				8AEEB1C92248EAE3005BB0E7 /* Youtube MVP */,
 				8A7B1D8822400B0800E02FF6 /* YouTube */,
@@ -265,9 +268,25 @@
 			path = "Questionnaire App";
 			sourceTree = "<group>";
 		};
+		8A2DCA6B224F9CF100CE9871 /* Auto size textview  */ = {
+			isa = PBXGroup;
+			children = (
+				8A2DCA6C224F9D0800CE9871 /* AutoTextViewController.swift */,
+			);
+			path = "Auto size textview ";
+			sourceTree = "<group>";
+		};
+		8A2DCA6E2251444E00CE9871 /* FirBase Demo */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "FirBase Demo";
+			sourceTree = "<group>";
+		};
 		8A5C05C7224BD4B600D03AC1 /* Cool Projects */ = {
 			isa = PBXGroup;
 			children = (
+				8A2DCA6B224F9CF100CE9871 /* Auto size textview  */,
 				8A99A34D224D6A3A00EA3CB8 /* Animated Circle ProgressBar */,
 				8A99A346224D5D0000EA3CB8 /* Face Detection */,
 				8ABB96F5224D36BF004EB2D6 /* Drag & Drop Images */,
@@ -731,6 +750,7 @@
 				8A99A34F224D6A5B00EA3CB8 /* AnimatedCircleViewController.swift in Sources */,
 				8A7B1DB122400C3500E02FF6 /* QuestionController.swift in Sources */,
 				8A7B1D9A22400BF100E02FF6 /* FBSummryLearn.swift in Sources */,
+				8A2DCA6D224F9D0800CE9871 /* AutoTextViewController.swift in Sources */,
 				8A7B1DB622400C3500E02FF6 /* Question.swift in Sources */,
 				8A26E2B72234379700E97351 /* CustomCollectionView.swift in Sources */,
 				8A99A34A224D615900EA3CB8 /* FacePageCell.swift in Sources */,
